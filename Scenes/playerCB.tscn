@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://5xae681r6vjf"]
+
+[ext_resource type="Script" uid="uid://dbs8kfecm0tca" path="res://Scripts/player_cb.gd" id="1_2bwjg"]
+[ext_resource type="Texture2D" uid="uid://d4ip2eqros5uo" path="res://Sprites/Player/boy.png" id="2_8v0cj"]
+[ext_resource type="Texture2D" uid="uid://oib5fo634hpt" path="res://Sprites/Player/boyJump.png" id="2_xfy5m"]
+[ext_resource type="Texture2D" uid="uid://bxt4457saislm" path="res://Sprites/Player/boyRun.png" id="3_8pocd"]
+[ext_resource type="Texture2D" uid="uid://b788wl86q85hn" path="res://Sprites/Player/boyIdle.png" id="3_maenc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kq42t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i7csx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8v0cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_maenc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xfy5m")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8v0cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pocd")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_maenc"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_2bwjg")
+metadata/_edit_group_ = true
+
+[node name="PhysicsCollisions" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+scale = Vector2(1, 0.8)
+shape = SubResource("CapsuleShape2D_kq42t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_i7csx")
+animation = &"jump"
+
+[node name="DamageArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+position = Vector2(0, 5)
+scale = Vector2(1.1, 0.8)
+shape = SubResource("CapsuleShape2D_maenc")
+
+[node name="Camera" type="Camera2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="DamageArea" to="." method="_on_damage_area_body_entered"]

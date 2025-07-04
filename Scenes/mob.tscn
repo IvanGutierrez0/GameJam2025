@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cbqeuynhpq1iu"]
 
-[ext_resource type="Texture2D" uid="uid://cu0dgu844joma" path="res://Sprites/bat1.png" id="1_nokgg"]
+[ext_resource type="Texture2D" uid="uid://cu0dgu844joma" path="res://Sprites/Enemies/bat1.png" id="1_nokgg"]
 [ext_resource type="Script" uid="uid://cc4pd3scgiroj" path="res://Scripts/mob.gd" id="1_ubaqv"]
-[ext_resource type="Texture2D" uid="uid://dalracqcdwcf7" path="res://Sprites/bat2.png" id="2_ubaqv"]
+[ext_resource type="Texture2D" uid="uid://dalracqcdwcf7" path="res://Sprites/Enemies/bat2.png" id="2_ubaqv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p11y5"]
 animations = [{

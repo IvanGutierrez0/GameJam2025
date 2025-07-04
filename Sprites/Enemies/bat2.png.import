@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxt4457saislm"
-path="res://.godot/imported/boyRun.png-1c2a291e848a592a25b8edd2c1ff7996.ctex"
+uid="uid://dalracqcdwcf7"
+path="res://.godot/imported/bat2.png-8125a6b147ba48f22e1370542705b09e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/boyRun.png"
-dest_files=["res://.godot/imported/boyRun.png-1c2a291e848a592a25b8edd2c1ff7996.ctex"]
+source_file="res://Sprites/Enemies/bat2.png"
+dest_files=["res://.godot/imported/bat2.png-8125a6b147ba48f22e1370542705b09e.ctex"]
 
 [params]
 
