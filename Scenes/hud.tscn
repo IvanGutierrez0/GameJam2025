@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://w1eqyqepoxjm"]
+
+[ext_resource type="Texture2D" uid="uid://q83qcn2evgu7" path="res://Sprites/UI/heart1.png" id="1_e0onf"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Scoretext" type="Label" parent="."]
+offset_left = 863.0
+offset_top = 2.0
+offset_right = 942.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 25
+text = "Score:"
+
+[node name="ScorePoints" type="Label" parent="."]
+offset_left = 941.0
+offset_top = 3.0
+offset_right = 1153.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 25
+text = "1000"
+
+[node name="Heart1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(20, 20)
+scale = Vector2(3, 3)
+texture = ExtResource("1_e0onf")
+
+[node name="Heart2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(60, 20)
+scale = Vector2(3, 3)
+texture = ExtResource("1_e0onf")
+
+[node name="Heart3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(100, 20)
+scale = Vector2(3, 3)
+texture = ExtResource("1_e0onf")

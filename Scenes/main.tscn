@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://qd85xgd5g6kw"]
+[gd_scene load_steps=7 format=4 uid="uid://qd85xgd5g6kw"]
 
 [ext_resource type="PackedScene" uid="uid://cbqeuynhpq1iu" path="res://Scenes/mob.tscn" id="2_8gbba"]
 [ext_resource type="Texture2D" uid="uid://btvwpxt8w5lb6" path="res://Sprites/Tiles/ground.png" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://5xae681r6vjf" path="res://Scenes/playerCB.tscn" id="3_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://w1eqyqepoxjm" path="res://Scenes/hud.tscn" id="3_kry3j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jjvhh"]
 texture = ExtResource("3_8gbba")
@@ -29,6 +30,10 @@ position = Vector2(524, 193)
 
 [node name="Player" parent="." instance=ExtResource("3_jjvhh")]
 position = Vector2(445, 217)
+
+[node name="HUD" parent="Player" instance=ExtResource("3_kry3j")]
+scale = Vector2(1.5, 1.5)
+transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
