@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbqeuynhpq1iu"]
+
+[ext_resource type="Texture2D" uid="uid://cu0dgu844joma" path="res://Sprites/bat1.png" id="1_nokgg"]
+[ext_resource type="Script" uid="uid://cc4pd3scgiroj" path="res://mob.gd" id="1_ubaqv"]
+[ext_resource type="Texture2D" uid="uid://dalracqcdwcf7" path="res://Sprites/bat2.png" id="2_ubaqv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p11y5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nokgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ubaqv")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5nov"]
+
+[node name="Mob" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_ubaqv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_p11y5")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_s5nov")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+metadata/_edit_group_ = true
