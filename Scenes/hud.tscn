@@ -5,18 +5,18 @@
 [node name="HUD" type="CanvasLayer"]
 
 [node name="Scoretext" type="Label" parent="."]
-offset_left = 863.0
-offset_top = 2.0
-offset_right = 942.0
-offset_bottom = 42.0
+offset_left = 1016.0
+offset_top = 3.0
+offset_right = 1095.0
+offset_bottom = 43.0
 theme_override_font_sizes/font_size = 25
 text = "Score:"
 
 [node name="ScorePoints" type="Label" parent="."]
-offset_left = 941.0
-offset_top = 3.0
-offset_right = 1153.0
-offset_bottom = 38.0
+offset_left = 1092.0
+offset_top = 4.0
+offset_right = 1304.0
+offset_bottom = 39.0
 theme_override_font_sizes/font_size = 25
 text = "1000"
 
@@ -34,6 +34,6 @@ texture = ExtResource("1_e0onf")
 
 [node name="Heart3" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(100, 20)
+position = Vector2(99, 20)
 scale = Vector2(3, 3)
 texture = ExtResource("1_e0onf")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://82j0oin4ybe2"]
+
+[ext_resource type="Texture2D" uid="uid://bvhkw14g7u75t" path="res://icon.svg" id="1_t8dmt"]
+[ext_resource type="Script" uid="uid://bo5vyap4pwluj" path="res://Scenes/flashbang.gd" id="1_x1s8y"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x1s8y"]
+friction = 0.0
+bounce = 0.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rv4xk"]
+
+[node name="Flashbang" type="RigidBody2D"]
+texture_filter = 1
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_x1s8y")
+gravity_scale = 0.5
+script = ExtResource("1_x1s8y")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_t8dmt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.75, 0.75)
+shape = SubResource("CircleShape2D_rv4xk")
