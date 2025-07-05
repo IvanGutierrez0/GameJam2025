@@ -1,36 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbqeuynhpq1iu"]
+[gd_scene load_steps=6 format=3 uid="uid://c6cp5fen3472r"]
 
-[ext_resource type="Texture2D" uid="uid://cu0dgu844joma" path="res://Sprites/Enemies/bat1.png" id="1_nokgg"]
-[ext_resource type="Script" uid="uid://cc4pd3scgiroj" path="res://Scripts/mob.gd" id="1_ubaqv"]
-[ext_resource type="Texture2D" uid="uid://dalracqcdwcf7" path="res://Sprites/Enemies/bat2.png" id="2_ubaqv"]
+[ext_resource type="Script" uid="uid://bgqgaf1ppy53i" path="res://Scripts/mob.gd" id="1_b44se"]
+[ext_resource type="Texture2D" uid="uid://cu0dgu844joma" path="res://Sprites/Enemies/bat1.png" id="1_u8nqw"]
+[ext_resource type="Texture2D" uid="uid://dalracqcdwcf7" path="res://Sprites/Enemies/bat2.png" id="2_b44se"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_p11y5"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b3mxk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1qmh0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_nokgg")
+"texture": ExtResource("1_u8nqw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_ubaqv")
+"texture": ExtResource("2_b44se")
 }],
 "loop": true,
-"name": &"walk",
-"speed": 5.0
+"name": &"fly",
+"speed": 7.5
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_s5nov"]
+[node name="Mob" type="Area2D" groups=["Enemy"]]
+script = ExtResource("1_b44se")
 
-[node name="Mob" type="RigidBody2D" groups=["Enemy"]]
-gravity_scale = 0.0
-script = ExtResource("1_ubaqv")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.6, 0.5)
+shape = SubResource("CapsuleShape2D_b3mxk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_p11y5")
-animation = &"walk"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_s5nov")
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-metadata/_edit_group_ = true
+sprite_frames = SubResource("SpriteFrames_1qmh0")
+animation = &"fly"
+frame = 1

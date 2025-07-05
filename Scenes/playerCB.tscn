@@ -55,7 +55,7 @@ shape = SubResource("CapsuleShape2D_kq42t")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_i7csx")
-animation = &"jump"
+animation = &"idle"
 
 [node name="DamageArea" type="Area2D" parent="."]
 
@@ -78,7 +78,7 @@ wait_time = 3.0
 [node name="FlashbangTimer" type="Timer" parent="Timers"]
 wait_time = 2.5
 
-[connection signal="body_entered" from="DamageArea" to="." method="_on_damage_area_body_entered"]
+[connection signal="area_entered" from="DamageArea" to="." method="_on_damage_area_area_entered"]
 [connection signal="timeout" from="Timers/InmunityTimer" to="." method="_on_inmunity_timer_timeout"]
 [connection signal="timeout" from="Timers/PowerTimer" to="." method="_on_power_timer_timeout"]
 [connection signal="timeout" from="Timers/FlashbangTimer" to="." method="_on_flashbang_timer_timeout"]

@@ -65,13 +65,7 @@ func spawnFlashbang(direction) -> void:
 	
 	$Timers/FlashbangTimer.start()
 
-func _on_damage_area_body_entered(body: Node2D) -> void:
-	if $Timers/InmunityTimer.is_stopped() and body.is_in_group("Enemy"):
-		health -= 1
-		if health <= 0: 
-			hide()
-		
-		$Timers/InmunityTimer.start()
+
 
 func _on_inmunity_timer_timeout() -> void:
 	$Timers/InmunityTimer.stop()
@@ -85,3 +79,11 @@ func _on_flashbang_timer_timeout() -> void:
 
 func blind() -> void:
 	print("Estoy cegado")
+
+func _on_damage_area_area_entered(area: Area2D) -> void:
+	if $Timers/InmunityTimer.is_stopped() and area.is_in_group("Enemy"):
+		health -= 1
+		if health <= 0: 
+			hide()
+		
+		$Timers/InmunityTimer.start()
