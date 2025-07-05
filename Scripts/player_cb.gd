@@ -8,6 +8,9 @@ signal hit
 @export var inmuneTime = 2.0
 var lastDirection = 1
 
+@export var lightEnergy = 0.5
+var transparency = 0
+
 var main
 
 var flashbang_scene = preload("res://Scenes/flashbang.tscn")
@@ -16,12 +19,11 @@ var projectiles_container
 
 func _start() -> void:  
 	show()
-	
 
 func _ready():
 	main = get_node("../")
 	$AnimatedSprite2D.flip_h = true
-	
+	$Flash.hide()
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -53,6 +55,10 @@ func _physics_process(delta: float) -> void:
 	$AnimatedSprite2D.play()
 	move_and_slide()
 	
+	if not $Timers/FlashedTimer.is_stopped(): 
+		transparency -= 0.005
+		$Flash.modulate.a = transparency
+	
 	if Input.is_action_pressed("useHab") and $Timers/PowerTimer.is_stopped():
 		spawnFlashbang(lastDirection) 
 		$Timers/PowerTimer.start()
@@ -69,8 +75,6 @@ func spawnFlashbang(direction) -> void:
 	
 	$Timers/FlashbangTimer.start()
 
-
-
 func _on_inmunity_timer_timeout() -> void:
 	$Timers/InmunityTimer.stop()
 
@@ -80,9 +84,6 @@ func _on_power_timer_timeout() -> void:
 func _on_flashbang_timer_timeout() -> void:
 	$Timers/FlashbangTimer.stop()
 	projectiles_container.remove_child(flashbang)
-
-func blind() -> void:
-	print("Estoy cegado")
 
 func _on_damage_area_area_entered(area: Area2D) -> void:
 	if $Timers/InmunityTimer.is_stopped() and area.is_in_group("Enemy"):
@@ -98,3 +99,13 @@ func _on_damage_area_area_entered(area: Area2D) -> void:
 			if health < 3:
 				health += 1
 				main.playerGainsLife()
+
+func blind() -> void:
+	transparency = 1
+	$Flash.show()
+	$Timers/FlashedTimer.start()
+
+func _on_flashed_timer_timeout() -> void:
+	$Timers/FlashedTimer.stop()
+	$Flash.hide()
+	transparency = 0

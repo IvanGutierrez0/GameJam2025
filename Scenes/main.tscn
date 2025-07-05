@@ -47,5 +47,5 @@ position = Vector2(360, 231)
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Mob" parent="Enemies" instance=ExtResource("2_8gbba")]
+[node name="Mage" parent="Enemies" instance=ExtResource("2_8gbba")]
 position = Vector2(536, 215)
