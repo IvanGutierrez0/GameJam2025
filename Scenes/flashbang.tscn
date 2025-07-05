@@ -1,10 +1,10 @@
 [gd_scene load_steps=17 format=3 uid="uid://82j0oin4ybe2"]
 
 [ext_resource type="Script" uid="uid://csv0jvqdyik1i" path="res://Scripts/flashbang.gd" id="1_x1s8y"]
-[ext_resource type="Texture2D" uid="uid://bcpgnw3lxulto" path="res://Sprites/Items/flashbang.png" id="2_rv4xk"]
+[ext_resource type="Texture2D" uid="uid://chtrjhop0jh6d" path="res://Sprites/VFX/Flash.png" id="2_rl2pc"]
 [ext_resource type="Texture2D" uid="uid://ckvc3sspti86e" path="res://Sprites/VFX/puff4.png" id="3_bwm7d"]
 [ext_resource type="AudioStream" uid="uid://b23312gluvjhn" path="res://Audio/SFX/bang.mp3" id="3_rl2pc"]
-[ext_resource type="Texture2D" uid="uid://chtrjhop0jh6d" path="res://Sprites/Items/Flash.png" id="3_rv4xk"]
+[ext_resource type="Texture2D" uid="uid://bcpgnw3lxulto" path="res://Sprites/Items/Weapons/flashbang.png" id="4_5dcsx"]
 [ext_resource type="Texture2D" uid="uid://c30xpfaqw7jyg" path="res://Sprites/VFX/puff5.png" id="4_rl2pc"]
 [ext_resource type="Texture2D" uid="uid://btsb27dvb5uxl" path="res://Sprites/VFX/puff6.png" id="5_5dcsx"]
 [ext_resource type="Texture2D" uid="uid://dwypqhdin7pva" path="res://Sprites/VFX/puff7.png" id="6_8avng"]
@@ -26,7 +26,7 @@ bounce = 0.5
 animations = [{
 "frames": [{
 "duration": 4.0,
-"texture": ExtResource("2_rv4xk")
+"texture": ExtResource("4_5dcsx")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_bwm7d")
@@ -58,7 +58,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_rv4xk")
+"texture": ExtResource("4_5dcsx")
 }],
 "loop": true,
 "name": &"flashbang",
@@ -86,7 +86,7 @@ autostart = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 visible = false
-texture = ExtResource("3_rv4xk")
+texture = ExtResource("2_rl2pc")
 
 [node name="FlashedArea" type="Area2D" parent="."]
 
@@ -99,7 +99,7 @@ stream = ExtResource("3_rl2pc")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_m6jth")
-animation = &"explosion"
+animation = &"flashbang"
 autoplay = "flashbang"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://w1eqyqepoxjm"]
 
 [ext_resource type="Script" uid="uid://bde618nfxlvfi" path="res://Scripts/hud.gd" id="1_fccik"]
-[ext_resource type="Texture2D" uid="uid://bt14vcxyhy1fy" path="res://Sprites/Items/Heart0.png" id="2_fccik"]
-[ext_resource type="Texture2D" uid="uid://cd7nv5vudtqyv" path="res://Sprites/Items/Heart1.png" id="3_bjfho"]
+[ext_resource type="Texture2D" uid="uid://bt14vcxyhy1fy" path="res://Sprites/Items/Coins/Heart0.png" id="2_fccik"]
+[ext_resource type="Texture2D" uid="uid://cd7nv5vudtqyv" path="res://Sprites/Items/Coins/Heart1.png" id="3_bjfho"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6fbih"]
 animations = [{
@@ -40,7 +40,7 @@ offset_top = 4.0
 offset_right = 1304.0
 offset_bottom = 39.0
 theme_override_font_sizes/font_size = 25
-text = "1000"
+text = "0"
 
 [node name="Heart0" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

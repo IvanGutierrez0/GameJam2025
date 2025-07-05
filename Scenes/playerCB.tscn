@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://eqkl6mquje7b" path="res://Sprites/Player/Correr.png" id="3_q8q5l"]
 [ext_resource type="Texture2D" uid="uid://datxi8lafxpqk" path="res://Sprites/Player/ChilldeCojones.png" id="4_atkl2"]
 [ext_resource type="Texture2D" uid="uid://q7ko02ogrkjn" path="res://Sprites/Player/PaArriba.png" id="4_i4kcx"]
-[ext_resource type="Texture2D" uid="uid://chtrjhop0jh6d" path="res://Sprites/Items/Flash.png" id="7_4o5y7"]
+[ext_resource type="Texture2D" uid="uid://chtrjhop0jh6d" path="res://Sprites/VFX/Flash.png" id="8_nji1o"]
 [ext_resource type="AudioStream" uid="uid://be0cy7q0g104d" path="res://Audio/Music/gameplay.mp3" id="9_nji1o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i7csx"]
@@ -68,7 +68,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_4o5y7")
+"texture": ExtResource("8_nji1o")
 }],
 "loop": true,
 "name": &"show",
@@ -123,19 +123,21 @@ texture_filter = 1
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_4o5y7")
 animation = &"show"
-autoplay = "show"
+autoplay = "hide"
 
 [node name="DynamicLight" type="PointLight2D" parent="."]
 energy = 0.0
-texture = ExtResource("7_4o5y7")
+texture = ExtResource("8_nji1o")
 
-[node name="Speaker" type="AudioStreamPlayer2D" parent="."]
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="Speaker" type="AudioStreamPlayer2D" parent="Audio"]
 position = Vector2(0, 1)
 stream = ExtResource("9_nji1o")
 autoplay = true
 parameters/looping = false
 
-[node name="Listener" type="AudioListener2D" parent="."]
+[node name="Listener" type="AudioListener2D" parent="Audio"]
 
 [connection signal="area_entered" from="DamageArea" to="." method="_on_damage_area_area_entered"]
 [connection signal="timeout" from="Timers/InmunityTimer" to="." method="_on_inmunity_timer_timeout"]

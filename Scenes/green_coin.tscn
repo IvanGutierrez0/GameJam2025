@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://r5ggehhdur5o"]
+
+[ext_resource type="Script" uid="uid://cwlho5qravc0k" path="res://Scripts/green_coin.gd" id="1_kp5qq"]
+[ext_resource type="Texture2D" uid="uid://d0o0yakv6fgni" path="res://Sprites/Items/Coins/FuegoFatuoVerde4.png" id="2_kp5qq"]
+[ext_resource type="Texture2D" uid="uid://d14js3ap4o4a2" path="res://Sprites/Items/Coins/FuegoFatuoVerde3.png" id="3_up5vu"]
+[ext_resource type="Texture2D" uid="uid://cjrkxp60rvxtw" path="res://Sprites/Items/Coins/FuegoFatuoVerde1.png" id="4_arshc"]
+[ext_resource type="Texture2D" uid="uid://dkfrvomw2p1tc" path="res://Sprites/Items/Coins/FuegoFatuoVerde2.png" id="5_2fawp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_71rdb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_up5vu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kp5qq")
+}],
+"loop": true,
+"name": &"pickup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_arshc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2fawp")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kp5qq"]
+
+[node name="GreenCoin" type="Area2D" groups=["Item"]]
+texture_filter = 1
+script = ExtResource("1_kp5qq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_71rdb")
+animation = &"pickup"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_kp5qq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdinacg6nuymi"
-path="res://.godot/imported/Heart4.png-bce9f59dee5e56fd912af177b0a796d0.ctex"
+uid="uid://deb3vq5dyj4p0"
+path="res://.godot/imported/FuegoFatuoAzul1.png-506249d5990c9017b29b5533dea8c306.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Items/Heart4.png"
-dest_files=["res://.godot/imported/Heart4.png-bce9f59dee5e56fd912af177b0a796d0.ctex"]
+source_file="res://Sprites/Items/Coins/FuegoFatuoAzul1.png"
+dest_files=["res://.godot/imported/FuegoFatuoAzul1.png-506249d5990c9017b29b5533dea8c306.ctex"]
 
 [params]
 

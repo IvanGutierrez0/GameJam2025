@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chtrjhop0jh6d"
-path="res://.godot/imported/Flash.png-59d2564fe41e4dd9b561cdc5defaff05.ctex"
+uid="uid://b056le6reoe1n"
+path="res://.godot/imported/Heart3.png-e967def4adb2dba2ab4510de44e88e82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Items/Flash.png"
-dest_files=["res://.godot/imported/Flash.png-59d2564fe41e4dd9b561cdc5defaff05.ctex"]
+source_file="res://Sprites/Items/Coins/Heart3.png"
+dest_files=["res://.godot/imported/Heart3.png-e967def4adb2dba2ab4510de44e88e82.ctex"]
 
 [params]
 

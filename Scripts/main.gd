@@ -18,3 +18,6 @@ func playerLosesLife() -> void:
 func playerGainsLife() -> void:
 	health += 1
 	hud.updateLife(health)
+
+func pickedCoin(tipo: int) -> void:
+	hud.pickedCoin(tipo)

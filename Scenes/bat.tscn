@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmn42v6h7uecx"]
+
+[ext_resource type="Script" uid="uid://bxrrn4mhxsclf" path="res://Scripts/bat.gd" id="1_wt6c1"]
+[ext_resource type="Texture2D" uid="uid://cu0dgu844joma" path="res://Sprites/Enemies/bat1.png" id="2_wt6c1"]
+[ext_resource type="Texture2D" uid="uid://dalracqcdwcf7" path="res://Sprites/Enemies/bat2.png" id="3_50dnf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbshb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1qmh0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wt6c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_50dnf")
+}],
+"loop": true,
+"name": &"move",
+"speed": 7.5
+}]
+
+[node name="Bat" type="Area2D" groups=["Enemy"]]
+script = ExtResource("1_wt6c1")
+
+[node name="KillingArea" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1)
+shape = SubResource("CircleShape2D_bbshb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_1qmh0")
+animation = &"move"
+frame_progress = 0.927976
+
+[node name="Speaker" type="AudioStreamPlayer2D" parent="."]

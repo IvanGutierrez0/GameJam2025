@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd7nv5vudtqyv"
-path="res://.godot/imported/Heart1.png-c274fb2774bbbd323aee734ff77c7f4f.ctex"
+uid="uid://bcpgnw3lxulto"
+path="res://.godot/imported/flashbang.png-0bfeddd0d89cdcc1a2d87743b6591fdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Items/Heart1.png"
-dest_files=["res://.godot/imported/Heart1.png-c274fb2774bbbd323aee734ff77c7f4f.ctex"]
+source_file="res://Sprites/Items/Weapons/flashbang.png"
+dest_files=["res://.godot/imported/flashbang.png-0bfeddd0d89cdcc1a2d87743b6591fdc.ctex"]
 
 [params]
 

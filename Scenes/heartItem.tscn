@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://p7arpqugd27f"]
 
 [ext_resource type="Script" uid="uid://vl1qvaoqlr6a" path="res://Scripts/heart_item.gd" id="1_ysqfy"]
-[ext_resource type="Texture2D" uid="uid://d0c8eds4xj608" path="res://Sprites/Items/Heart5.png" id="2_1vtei"]
-[ext_resource type="Texture2D" uid="uid://cdinacg6nuymi" path="res://Sprites/Items/Heart4.png" id="2_ysqfy"]
-[ext_resource type="Texture2D" uid="uid://b056le6reoe1n" path="res://Sprites/Items/Heart3.png" id="3_1vtei"]
-[ext_resource type="Texture2D" uid="uid://ht6m12hy1kil" path="res://Sprites/Items/Heart2.png" id="4_gyqp4"]
+[ext_resource type="Texture2D" uid="uid://d0c8eds4xj608" path="res://Sprites/Items/Coins/Heart5.png" id="2_1vtei"]
+[ext_resource type="Texture2D" uid="uid://cdinacg6nuymi" path="res://Sprites/Items/Coins/Heart4.png" id="2_ysqfy"]
+[ext_resource type="Texture2D" uid="uid://b056le6reoe1n" path="res://Sprites/Items/Coins/Heart3.png" id="3_1vtei"]
+[ext_resource type="Texture2D" uid="uid://ht6m12hy1kil" path="res://Sprites/Items/Coins/Heart2.png" id="4_gyqp4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xg5ij"]
 

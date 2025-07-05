@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7sn4h4dti8y5"]
+
+[ext_resource type="Script" uid="uid://cvq518rvcu7o3" path="res://Scripts/blue_coin.gd" id="1_udap7"]
+[ext_resource type="Texture2D" uid="uid://ccdyy0s35jjyr" path="res://Sprites/Items/Coins/FuegoFatuoAzul4.png" id="2_4d02t"]
+[ext_resource type="Texture2D" uid="uid://bxdptfl7h71yi" path="res://Sprites/Items/Coins/FuegoFatuoAzul5.png" id="3_2mnkw"]
+[ext_resource type="Texture2D" uid="uid://deb3vq5dyj4p0" path="res://Sprites/Items/Coins/FuegoFatuoAzul1.png" id="4_pw6r6"]
+[ext_resource type="Texture2D" uid="uid://gawkgkmdc4n5" path="res://Sprites/Items/Coins/FuegoFatuoAzul2.png" id="5_1keab"]
+[ext_resource type="Texture2D" uid="uid://c820vvs1nb2i6" path="res://Sprites/Items/Coins/FuegoFatuoAzul3.png" id="6_lipnf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_71rdb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4d02t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2mnkw")
+}],
+"loop": true,
+"name": &"pickup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pw6r6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1keab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lipnf")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ff2gq"]
+
+[node name="BlueCoin" type="Area2D" groups=["Item"]]
+texture_filter = 1
+script = ExtResource("1_udap7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_71rdb")
+animation = &"spin"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CapsuleShape2D_ff2gq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
