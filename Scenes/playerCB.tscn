@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://5xae681r6vjf"]
+[gd_scene load_steps=11 format=3 uid="uid://5xae681r6vjf"]
 
 [ext_resource type="Script" uid="uid://dbs8kfecm0tca" path="res://Scripts/player_cb.gd" id="1_2bwjg"]
 [ext_resource type="Texture2D" uid="uid://frec6h805s1a" path="res://Sprites/Player/Ded.png" id="2_i4kcx"]
@@ -8,9 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://datxi8lafxpqk" path="res://Sprites/Player/ChilldeCojones.png" id="4_atkl2"]
 [ext_resource type="Texture2D" uid="uid://q7ko02ogrkjn" path="res://Sprites/Player/PaArriba.png" id="4_i4kcx"]
 [ext_resource type="Texture2D" uid="uid://chtrjhop0jh6d" path="res://Sprites/Items/Flash.png" id="7_4o5y7"]
-[ext_resource type="Texture2D" uid="uid://bt0q355rxpfka" path="res://Sprites/Background/bg0.png" id="9_5e6va"]
-[ext_resource type="Texture2D" uid="uid://cmnjp7hoej8to" path="res://Sprites/Background/bg1.png" id="10_b0ti5"]
-[ext_resource type="Texture2D" uid="uid://b3ul1mayoiavb" path="res://Sprites/Background/bg2.png" id="11_titrn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i7csx"]
 animations = [{
@@ -134,44 +131,21 @@ texture = ExtResource("7_4o5y7")
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer0" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-position = Vector2(1, 0)
-motion_scale = Vector2(0.05, 1)
-motion_mirroring = Vector2(580.8, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer0"]
-modulate = Color(0.5, 0.5, 0.5, 1)
-position = Vector2(1, 0)
-scale = Vector2(4.4, 2)
-texture = ExtResource("9_5e6va")
-region_enabled = true
-region_rect = Rect2(0, 0, 176, 220)
 
 [node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-motion_scale = Vector2(0.1, 1)
-motion_mirroring = Vector2(580.8, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
-modulate = Color(0.75, 0.75, 0.75, 1)
-position = Vector2(0.69696, 0)
-scale = Vector2(4.4, 2)
-texture = ExtResource("10_b0ti5")
-region_enabled = true
-region_rect = Rect2(0, 0, 176, 220)
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-position = Vector2(1, 0)
-motion_scale = Vector2(0.2, 1)
-motion_mirroring = Vector2(580.8, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2(1.30304, 0)
-scale = Vector2(4.4, 2)
-texture = ExtResource("11_titrn")
-region_enabled = true
-region_rect = Rect2(0, 0, 176, 220)
+
+[node name="Speaker" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 1)
+
+[node name="Listener" type="AudioListener2D" parent="."]
 
 [connection signal="area_entered" from="DamageArea" to="." method="_on_damage_area_area_entered"]
 [connection signal="timeout" from="Timers/InmunityTimer" to="." method="_on_inmunity_timer_timeout"]
