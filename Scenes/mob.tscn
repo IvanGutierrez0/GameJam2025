@@ -24,7 +24,7 @@ animations = [{
 script = ExtResource("1_b44se")
 path = [Vector2(-100, 0), Vector2(100, 0)]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="KillingArea" type="CollisionShape2D" parent="."]
 scale = Vector2(1.6, 0.5)
 shape = SubResource("CapsuleShape2D_b3mxk")
 

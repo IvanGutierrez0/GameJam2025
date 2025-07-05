@@ -24,6 +24,7 @@ project/assembly_name="GameJam2025"
 Player=""
 Enemy=""
 Item=""
+Weapon=""
 
 [input]
 

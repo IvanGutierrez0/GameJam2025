@@ -61,14 +61,13 @@ metadata/_edit_group_ = true
 texture_filter = 1
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_i7csx")
-animation = &"dead"
+animation = &"idle"
 
 [node name="DamageArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DamageArea"]
 scale = Vector2(0.75, 0.75)
-polygon = PackedVector2Array(-13, -13, 14.6667, -10.6667, 8, 4, 21.3333, 12, 14.667, 30, -24, 30, -26.6667, 10.6667, -12, 6.66667)
+polygon = PackedVector2Array(-13.3333, -17.3333, 14.6667, -14.6667, 8, 4, 21.3333, 12, 14.667, 30, -24, 30, -26.6667, 10.6667, -12, 6.66667)
 
 [node name="Camera" type="Camera2D" parent="."]
 visible = false
@@ -87,8 +86,9 @@ wait_time = 3.0
 wait_time = 2.5
 
 [node name="PhysicsCollider" type="CollisionPolygon2D" parent="."]
+position = Vector2(1, 0)
 scale = Vector2(0.75, 0.75)
-polygon = PackedVector2Array(-13, -13, 14.6667, -10.6667, 8, 4, 21.3333, 12, 14.667, 30, -24, 30, -26.6667, 10.6667, -12, 6.66667)
+polygon = PackedVector2Array(-13.3333, -17.3333, 14.6667, -13.3333, 8, 4, 22.6667, 5.33333, 14.667, 30, -24, 30, -28, 5.33333, -13.3333, 4)
 
 [connection signal="area_entered" from="DamageArea" to="." method="_on_damage_area_area_entered"]
 [connection signal="timeout" from="Timers/InmunityTimer" to="." method="_on_inmunity_timer_timeout"]

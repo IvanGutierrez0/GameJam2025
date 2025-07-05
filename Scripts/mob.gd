@@ -18,3 +18,6 @@ func _process(delta):
 
 	if position.distance_to(target) < 5:
 		current_point = (current_point + 1) % path.size()
+
+func damage():
+	print("Me han hecho pupa")
