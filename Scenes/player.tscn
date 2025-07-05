@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bl8qkmbmek28f"]
+[gd_scene load_steps=8 format=3 uid="uid://bl8qkmbmek28f"]
 
 [ext_resource type="Script" uid="uid://cqjo2q0jriekp" path="res://Scripts/player.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://d4ip2eqros5uo" path="res://Sprites/Player/boy.png" id="2_hqtel"]
@@ -29,6 +29,8 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1jxqw"]
 
+[sub_resource type="Curve2D" id="Curve2D_vgqql"]
+
 [node name="Player" type="Area2D"]
 gravity_point = true
 script = ExtResource("1_i3pqv")
@@ -46,5 +48,8 @@ shape = SubResource("CapsuleShape2D_1jxqw")
 
 [node name="GroundRayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 20)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_vgqql")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

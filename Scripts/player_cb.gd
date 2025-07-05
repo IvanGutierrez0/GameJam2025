@@ -7,9 +7,10 @@ signal hit
 @export var health = 3
 @export var inmuneTime = 2.0
 
-var isInmune = false
+var flashbang_scene = preload("res://Scenes/flashbang.tscn")
+var flashbang
 
-func _start() -> void:
+func _start() -> void:  
 	show()
 
 func _ready():
@@ -40,18 +41,34 @@ func _physics_process(delta: float) -> void:
 	
 	$AnimatedSprite2D.play()
 	move_and_slide()
+	
+	if Input.is_action_pressed("useHab") and $Timers/PowerTimer.is_stopped():
+		spawnFlashbang(direction) 
+		$Timers/PowerTimer.start()
 
+func spawnFlashbang(direction) -> void:
+	flashbang = flashbang_scene.instantiate()
+	flashbang.position = Vector2.ZERO
+	#flashbang.linear_velocity = Vector2(200 * direction, -200.0)
+	add_child(flashbang)
+	$Timers/FlashbangTimer.start()
 
-func _on_damage_area_body_entered(_body: Node2D) -> void:
-	if not isInmune:
+func _on_damage_area_body_entered(body: Node2D) -> void:
+	if $Timers/InmunityTimer.is_stopped() and body.is_in_group("Enemy"):
 		health -= 1
-		if health <= 0:
+		if health <= 0: 
 			hide()
 		
-		var timer = Timer.new()
-		add_child(timer)
-		
-		isInmune = true
-		timer.wait_time = inmuneTime
-		timer.timeout.connect(func(): isInmune = false)
-		timer.start()
+		$Timers/InmunityTimer.start()
+
+
+func _on_inmunity_timer_timeout() -> void:
+	$Timers/InmunityTimer.stop()
+
+func _on_power_timer_timeout() -> void:
+	$Timers/PowerTimer.stop()
+
+
+func _on_flashbang_timer_timeout() -> void:
+	$Timers/FlashbangTimer.stop()
+	remove_child(flashbang)

@@ -67,6 +67,20 @@ shape = SubResource("CapsuleShape2D_maenc")
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timers" type="Node2D" parent="."]
+
+[node name="InmunityTimer" type="Timer" parent="Timers"]
+wait_time = 2.0
+
+[node name="PowerTimer" type="Timer" parent="Timers" groups=["Player"]]
+wait_time = 3.0
+
+[node name="FlashbangTimer" type="Timer" parent="Timers"]
+wait_time = 2.5
+
+[node name="Area2D" type="Area2D" parent="."]
 
 [connection signal="body_entered" from="DamageArea" to="." method="_on_damage_area_body_entered"]
+[connection signal="timeout" from="Timers/InmunityTimer" to="." method="_on_inmunity_timer_timeout"]
+[connection signal="timeout" from="Timers/PowerTimer" to="." method="_on_power_timer_timeout"]
+[connection signal="timeout" from="Timers/FlashbangTimer" to="." method="_on_flashbang_timer_timeout"]
