@@ -7,7 +7,7 @@ var initialPos
 
 func _ready() -> void:
 	show()
-	$AnimatedSprite2D.animation  = "fly"
+	$AnimatedSprite2D.animation  = "move"
 	$AnimatedSprite2D.play()
 	initialPos = position
 
@@ -18,6 +18,8 @@ func _process(delta):
 
 	if position.distance_to(target) < 5:
 		current_point = (current_point + 1) % path.size()
+	
+	$AnimatedSprite2D.flip_h = direction.x > 0
 
 func damage():
 	print("Me han hecho pupa")

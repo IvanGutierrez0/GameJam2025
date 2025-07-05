@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://qd85xgd5g6kw"]
 
 [ext_resource type="Script" uid="uid://cvwate1nwsar8" path="res://Scripts/main.gd" id="1_kry3j"]
-[ext_resource type="PackedScene" uid="uid://c6cp5fen3472r" path="res://Scenes/mob.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://c6cp5fen3472r" path="res://Scenes/mage.tscn" id="2_8gbba"]
 [ext_resource type="Texture2D" uid="uid://btvwpxt8w5lb6" path="res://Sprites/Tiles/ground.png" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://5xae681r6vjf" path="res://Scenes/playerCB.tscn" id="3_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://w1eqyqepoxjm" path="res://Scenes/hud.tscn" id="3_kry3j"]

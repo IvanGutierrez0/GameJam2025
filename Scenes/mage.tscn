@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6cp5fen3472r"]
+
+[ext_resource type="Script" uid="uid://bgqgaf1ppy53i" path="res://Scripts/mage.gd" id="1_b44se"]
+[ext_resource type="Texture2D" uid="uid://p1l5ehydhkka" path="res://Sprites/Enemies/mage1.png" id="2_bbshb"]
+[ext_resource type="Texture2D" uid="uid://c52nk0eretlei" path="res://Sprites/Enemies/mage2.png" id="3_h01ui"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbshb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1qmh0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bbshb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h01ui")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[node name="Mage" type="Area2D" groups=["Enemy"]]
+script = ExtResource("1_b44se")
+path = [Vector2(-100, 0), Vector2(100, 0)]
+
+[node name="KillingArea" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_bbshb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_1qmh0")
+animation = &"move"
+frame_progress = 0.688881
