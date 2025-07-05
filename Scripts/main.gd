@@ -5,6 +5,8 @@ var hud
 
 func _ready() -> void:
 	hud = get_node("./Player/HUD")
+	$ParallaxBackground.offset.x = 2 * $Player.position.x
+	$ParallaxBackground.offset.y = 1.5 * $Player.position.y
 
 func _process(delta: float) -> void:
 	pass

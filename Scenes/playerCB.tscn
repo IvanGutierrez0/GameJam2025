@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://5xae681r6vjf"]
+[gd_scene load_steps=12 format=3 uid="uid://5xae681r6vjf"]
 
 [ext_resource type="Script" uid="uid://dbs8kfecm0tca" path="res://Scripts/player_cb.gd" id="1_2bwjg"]
 [ext_resource type="Texture2D" uid="uid://frec6h805s1a" path="res://Sprites/Player/Ded.png" id="2_i4kcx"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://datxi8lafxpqk" path="res://Sprites/Player/ChilldeCojones.png" id="4_atkl2"]
 [ext_resource type="Texture2D" uid="uid://q7ko02ogrkjn" path="res://Sprites/Player/PaArriba.png" id="4_i4kcx"]
 [ext_resource type="Texture2D" uid="uid://chtrjhop0jh6d" path="res://Sprites/Items/Flash.png" id="7_4o5y7"]
+[ext_resource type="AudioStream" uid="uid://be0cy7q0g104d" path="res://Audio/Music/gameplay.mp3" id="9_nji1o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i7csx"]
 animations = [{
@@ -119,7 +120,7 @@ polygon = PackedVector2Array(-13.3333, -17.3333, 14.6667, -13.3333, 8, 4, 22.666
 [node name="Flash" type="AnimatedSprite2D" parent="."]
 visible = false
 texture_filter = 1
-scale = Vector2(2.6, 2.6)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_4o5y7")
 animation = &"show"
 autoplay = "show"
@@ -128,22 +129,11 @@ autoplay = "show"
 energy = 0.0
 texture = ExtResource("7_4o5y7")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer0" type="ParallaxLayer" parent="ParallaxBackground"]
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer0"]
-
-[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-
 [node name="Speaker" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(0, 1)
+stream = ExtResource("9_nji1o")
+autoplay = true
+parameters/looping = false
 
 [node name="Listener" type="AudioListener2D" parent="."]
 

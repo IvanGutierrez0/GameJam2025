@@ -1,0 +1,96 @@
+[gd_scene load_steps=11 format=3 uid="uid://dcope63frcsnc"]
+
+[ext_resource type="Script" uid="uid://cc82jfird44k8" path="res://Scripts/menu_inicio.gd" id="1_7enhu"]
+[ext_resource type="Texture2D" uid="uid://bplqkdxgwjfk1" path="res://Sprites/Background/fondoju.png" id="2_tb8tw"]
+[ext_resource type="Texture2D" uid="uid://bxvwydn842bbm" path="res://Sprites/Player/Estico.png" id="5_ruvsc"]
+[ext_resource type="Texture2D" uid="uid://datxi8lafxpqk" path="res://Sprites/Player/ChilldeCojones.png" id="5_u1jxb"]
+[ext_resource type="AudioStream" uid="uid://c0vmvc32omab8" path="res://Audio/Music/musicamenu.mp3" id="6_r1ml1"]
+[ext_resource type="Texture2D" uid="uid://cspif7u4hxq0d" path="res://Sprites/UI/jugar.png" id="8_a4grk"]
+[ext_resource type="Script" path="res://Scripts/PlayerMenu.gd" id="8_f0uj6"]
+[ext_resource type="Texture2D" uid="uid://dau77kpplpkhp" path="res://Sprites/UI/salir.png" id="9_tq17b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vjw3m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ruvsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u1jxb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 0.5
+}]
+
+[sub_resource type="ImageTexture" id="ImageTexture_uia3i"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7enhu")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.998
+anchor_bottom = 0.983
+offset_left = -213.0
+offset_top = -161.0
+offset_right = 173.304
+offset_bottom = 226.016
+texture = ExtResource("2_tb8tw")
+
+[node name="Player" type="AnimatedSprite2D" parent="TextureRect3"]
+texture_filter = 1
+position = Vector2(902, 692)
+scale = Vector2(8.53907, 8.06641)
+sprite_frames = SubResource("SpriteFrames_vjw3m")
+animation = &"Idle"
+script = ExtResource("8_f0uj6")
+
+[node name="PointLight2D" type="PointLight2D" parent="TextureRect3"]
+position = Vector2(934, 492)
+scale = Vector2(0.0208249, 0.0284786)
+color = Color(0, 1, 1, 0)
+energy = 9.7
+texture = SubResource("ImageTexture_uia3i")
+
+[node name="Jugar" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.737
+anchor_top = 0.39
+anchor_right = 0.955
+anchor_bottom = 0.5
+offset_left = 0.976013
+offset_top = -12.72
+offset_right = -0.160034
+offset_bottom = 6.0
+texture_normal = ExtResource("8_a4grk")
+stretch_mode = 0
+
+[node name="Salir" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.748
+anchor_top = 0.52
+anchor_right = 0.951
+anchor_bottom = 0.664
+offset_left = 0.303955
+offset_top = 3.03998
+offset_right = 16.448
+offset_bottom = -0.272034
+texture_normal = ExtResource("9_tq17b")
+stretch_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_r1ml1")
+autoplay = true
