@@ -9,6 +9,9 @@ func _start() -> void:
 	$PointLight2D.hide()
 	$Timer.start()
 
+func _ready() -> void:
+	$Animation.animation = "flashbang"
+	$Animation.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:	
@@ -19,6 +22,8 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	$Timer.stop()
 	$PointLight2D.show()
+	$Animation.animation = "explosion"
+	$Animation.play()
 	
 	if isPlayerInArea:
 		var player = get_node("../../Player")
