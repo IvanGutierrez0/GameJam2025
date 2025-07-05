@@ -24,6 +24,7 @@ func _ready():
 	main = get_node("../")
 	$AnimatedSprite2D.flip_h = true
 	$Flash.hide()
+	#$ParallaxBackground.offset = 
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

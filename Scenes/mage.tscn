@@ -33,4 +33,4 @@ shape = SubResource("CircleShape2D_bbshb")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_1qmh0")
 animation = &"move"
-frame_progress = 0.688881
+frame_progress = 0.927976
