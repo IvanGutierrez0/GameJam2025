@@ -1,5 +1,6 @@
 extends RigidBody2D
 
+var isPlayerInArea = false
 
 # Called when the node enters the scene tree for the first time.
 func _start() -> void:
@@ -17,8 +18,23 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	$Timer.stop()
 	$PointLight2D.show()
+	
+	if isPlayerInArea:
+		var player = get_node("../../Player")
+		player.blind()
+	
 	lock_rotation = true
 	rotation_degrees = 0.0
 	#$Omnicheeks.rotation_degrees = -rotation_degrees
 	#$Omnicheeks.show()
 	
+
+
+func _on_flashed_area_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		isPlayerInArea = true
+
+
+func _on_flashed_area_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		isPlayerInArea = false

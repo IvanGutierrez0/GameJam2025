@@ -6,12 +6,18 @@ signal hit
 @export var JUMP_VELOCITY = -400.0
 @export var health = 3
 @export var inmuneTime = 2.0
+var lastDirection = 1
+
+var root_node
 
 var flashbang_scene = preload("res://Scenes/flashbang.tscn")
 var flashbang
+var projectiles_container
 
 func _start() -> void:  
+	root_node  = self.get_tree().get_root()
 	show()
+	
 
 func _ready():
 	pass
@@ -26,6 +32,7 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("moveLeft", "moveRight")
 	if direction:
 		velocity.x = direction * SPEED
+		lastDirection = direction
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
@@ -43,14 +50,19 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	if Input.is_action_pressed("useHab") and $Timers/PowerTimer.is_stopped():
-		spawnFlashbang(direction) 
+		spawnFlashbang(lastDirection) 
 		$Timers/PowerTimer.start()
 
 func spawnFlashbang(direction) -> void:
 	flashbang = flashbang_scene.instantiate()
-	flashbang.position = Vector2.ZERO
-	#flashbang.linear_velocity = Vector2(200 * direction, -200.0)
-	add_child(flashbang)
+	flashbang.position.x = global_position.x + 10 * direction
+	flashbang.position.y = global_position.y + 5
+	flashbang.linear_velocity = Vector2(250 * direction + velocity.x, -250)
+	
+	projectiles_container = get_tree().get_root().get_node("Main/Projectiles")
+	
+	projectiles_container.add_child(flashbang)
+	
 	$Timers/FlashbangTimer.start()
 
 func _on_damage_area_body_entered(body: Node2D) -> void:
@@ -61,14 +73,15 @@ func _on_damage_area_body_entered(body: Node2D) -> void:
 		
 		$Timers/InmunityTimer.start()
 
-
 func _on_inmunity_timer_timeout() -> void:
 	$Timers/InmunityTimer.stop()
 
 func _on_power_timer_timeout() -> void:
 	$Timers/PowerTimer.stop()
 
-
 func _on_flashbang_timer_timeout() -> void:
 	$Timers/FlashbangTimer.stop()
-	remove_child(flashbang)
+	projectiles_container.remove_child(flashbang)
+
+func blind() -> void:
+	print("Estoy cegado")

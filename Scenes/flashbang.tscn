@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://82j0oin4ybe2"]
+[gd_scene load_steps=7 format=3 uid="uid://82j0oin4ybe2"]
 
 [ext_resource type="Texture2D" uid="uid://bvhkw14g7u75t" path="res://icon.svg" id="1_t8dmt"]
 [ext_resource type="Script" uid="uid://csv0jvqdyik1i" path="res://Scenes/flashbang.gd" id="1_x1s8y"]
-[ext_resource type="Texture2D" uid="uid://chtrjhop0jh6d" path="res://Sprites/Flash.png" id="3_rv4xk"]
+[ext_resource type="Texture2D" uid="uid://chtrjhop0jh6d" path="res://Sprites/Items/Flash.png" id="3_rv4xk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x1s8y"]
 friction = 3.0
@@ -11,12 +11,13 @@ bounce = 0.5
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t8dmt"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rv4xk"]
+
 [node name="Flashbang" type="RigidBody2D" groups=["Player"]]
 texture_filter = 1
 mass = 0.1
 physics_material_override = SubResource("PhysicsMaterial_x1s8y")
 gravity_scale = 0.5
-linear_velocity = Vector2(200, -200)
 linear_damp = 1.0
 angular_velocity = 1.5708
 angular_damp = 1.0
@@ -39,4 +40,12 @@ autostart = true
 visible = false
 texture = ExtResource("3_rv4xk")
 
+[node name="FlashedArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FlashedArea"]
+scale = Vector2(7.5, 7.5)
+shape = SubResource("CircleShape2D_rv4xk")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="FlashedArea" to="." method="_on_flashed_area_body_entered"]
+[connection signal="body_exited" from="FlashedArea" to="." method="_on_flashed_area_body_exited"]
