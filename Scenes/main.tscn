@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://qd85xgd5g6kw"]
+[gd_scene load_steps=13 format=4 uid="uid://qd85xgd5g6kw"]
 
 [ext_resource type="Script" uid="uid://cvwate1nwsar8" path="res://Scripts/main.gd" id="1_kry3j"]
 [ext_resource type="PackedScene" uid="uid://c6cp5fen3472r" path="res://Scenes/mage.tscn" id="2_8gbba"]
@@ -6,12 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://5xae681r6vjf" path="res://Scenes/playerCB.tscn" id="3_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://w1eqyqepoxjm" path="res://Scenes/hud.tscn" id="3_kry3j"]
 [ext_resource type="PackedScene" uid="uid://p7arpqugd27f" path="res://Scenes/heartItem.tscn" id="6_21xkr"]
-[ext_resource type="Texture2D" uid="uid://bt0q355rxpfka" path="res://Sprites/Background/bg0.png" id="7_6bp64"]
 [ext_resource type="PackedScene" uid="uid://b7sn4h4dti8y5" path="res://Scenes/blue_coin.tscn" id="7_hptm8"]
 [ext_resource type="PackedScene" uid="uid://civfdlhs0easy" path="res://Scenes/red_coin.tscn" id="8_6iyac"]
-[ext_resource type="Texture2D" uid="uid://cmnjp7hoej8to" path="res://Sprites/Background/bg1.png" id="8_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://r5ggehhdur5o" path="res://Scenes/green_coin.tscn" id="9_fdnlq"]
-[ext_resource type="Texture2D" uid="uid://b3ul1mayoiavb" path="res://Sprites/Background/bg2.png" id="9_hptm8"]
+[ext_resource type="PackedScene" uid="uid://dhtjl5yg3lxi2" path="res://Scenes/parallax_background.tscn" id="10_hptm8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jjvhh"]
 texture = ExtResource("3_8gbba")
@@ -67,27 +65,4 @@ position = Vector2(768, 165)
 [node name="GreenCoin" parent="Items" instance=ExtResource("9_fdnlq")]
 position = Vector2(818, 165)
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer0" type="ParallaxLayer" parent="ParallaxBackground"]
-modulate = Color(0.5, 0.5, 0.5, 1)
-motion_scale = Vector2(0.05, 0.05)
-motion_mirroring = Vector2(1024, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer0"]
-texture = ExtResource("7_6bp64")
-
-[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
-modulate = Color(0.75, 0.75, 0.75, 1)
-motion_scale = Vector2(0.1, 0.1)
-motion_mirroring = Vector2(1024, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
-texture = ExtResource("8_ynf5e")
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.25, 0.25)
-motion_mirroring = Vector2(1024, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-texture = ExtResource("9_hptm8")
+[node name="ParallaxBackground" parent="." instance=ExtResource("10_hptm8")]
