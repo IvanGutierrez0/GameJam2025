@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6cp5fen3472r"]
+[gd_scene load_steps=7 format=3 uid="uid://c6cp5fen3472r"]
 
 [ext_resource type="Script" uid="uid://bgqgaf1ppy53i" path="res://Scripts/mob.gd" id="1_b44se"]
 [ext_resource type="Texture2D" uid="uid://cu0dgu844joma" path="res://Sprites/Enemies/bat1.png" id="1_u8nqw"]
@@ -20,6 +20,12 @@ animations = [{
 "speed": 7.5
 }]
 
+[sub_resource type="Curve2D" id="Curve2D_b44se"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -100, 0, 0, 0, 0, 0, 100, 0)
+}
+point_count = 2
+
 [node name="Mob" type="Area2D" groups=["Enemy"]]
 script = ExtResource("1_b44se")
 
@@ -32,3 +38,10 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_1qmh0")
 animation = &"fly"
 frame = 1
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_b44se")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(41.0007, 0)
+progress = 141.0

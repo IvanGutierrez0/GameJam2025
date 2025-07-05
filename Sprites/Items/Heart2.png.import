@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxt4457saislm"
-path="res://.godot/imported/boyRun.png-2960e1e676f3f4c905870a832bcee867.ctex"
+uid="uid://ht6m12hy1kil"
+path="res://.godot/imported/Heart2.png-15bd03a40a82d4c39fcc6cdbdda5a5ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/boyRun.png"
-dest_files=["res://.godot/imported/boyRun.png-2960e1e676f3f4c905870a832bcee867.ctex"]
+source_file="res://Sprites/Items/Heart2.png"
+dest_files=["res://.godot/imported/Heart2.png-15bd03a40a82d4c39fcc6cdbdda5a5ec.ctex"]
 
 [params]
 

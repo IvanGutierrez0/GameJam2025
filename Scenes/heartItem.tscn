@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://p7arpqugd27f"]
+
+[ext_resource type="Script" uid="uid://vl1qvaoqlr6a" path="res://Scripts/heart_item.gd" id="1_ysqfy"]
+[ext_resource type="Texture2D" uid="uid://d0c8eds4xj608" path="res://Sprites/Items/Heart5.png" id="2_1vtei"]
+[ext_resource type="Texture2D" uid="uid://cdinacg6nuymi" path="res://Sprites/Items/Heart4.png" id="2_ysqfy"]
+[ext_resource type="Texture2D" uid="uid://b056le6reoe1n" path="res://Sprites/Items/Heart3.png" id="3_1vtei"]
+[ext_resource type="Texture2D" uid="uid://ht6m12hy1kil" path="res://Sprites/Items/Heart2.png" id="4_gyqp4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xg5ij"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lvq12"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1vtei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gyqp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1vtei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ysqfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1vtei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gyqp4")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 5.0
+}]
+
+[node name="HeartItem" type="Area2D" groups=["Item"]]
+script = ExtResource("1_ysqfy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.4)
+shape = SubResource("CapsuleShape2D_xg5ij")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_lvq12")
+animation = &"spin"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

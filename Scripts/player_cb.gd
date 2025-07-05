@@ -8,19 +8,20 @@ signal hit
 @export var inmuneTime = 2.0
 var lastDirection = 1
 
-var root_node
+var main
 
 var flashbang_scene = preload("res://Scenes/flashbang.tscn")
 var flashbang
 var projectiles_container
 
 func _start() -> void:  
-	root_node  = self.get_tree().get_root()
 	show()
 	
 
 func _ready():
-	pass
+	main = get_node("../")
+	$AnimatedSprite2D.flip_h = true
+	
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -39,9 +40,12 @@ func _physics_process(delta: float) -> void:
 	if velocity.x != 0:
 		$AnimatedSprite2D.animation = "walk"
 		$AnimatedSprite2D.flip_v = false
-		$AnimatedSprite2D.flip_h = velocity.x < 0
+		$AnimatedSprite2D.flip_h = velocity.x > 0
 	if not is_on_floor():
-		$AnimatedSprite2D.animation = "jump"
+		if velocity.y > 0:
+			$AnimatedSprite2D.animation = "jumpDown"
+		else:
+			$AnimatedSprite2D.animation = "jumpUp"
 	
 	if velocity.length() == 0:
 		$AnimatedSprite2D.animation = "idle"
@@ -83,7 +87,14 @@ func blind() -> void:
 func _on_damage_area_area_entered(area: Area2D) -> void:
 	if $Timers/InmunityTimer.is_stopped() and area.is_in_group("Enemy"):
 		health -= 1
+		main.playerLosesLife()
+		
 		if health <= 0: 
 			hide()
 		
 		$Timers/InmunityTimer.start()
+	elif area.is_in_group("Item"):
+		if area.name == "HeartItem":
+			if health < 3:
+				health += 1
+				main.playerGainsLife()

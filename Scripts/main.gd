@@ -1,11 +1,18 @@
 extends Node2D
 
+var health = 3
+var hud
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	hud = get_node("./Player/HUD")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func playerLosesLife() -> void:
+	health -= 1
+	hud.updateLife(health)
+
+func playerGainsLife() -> void:
+	health += 1
+	hud.updateLife(health)
