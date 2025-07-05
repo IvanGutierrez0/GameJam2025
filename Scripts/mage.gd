@@ -22,4 +22,4 @@ func _process(delta):
 	$AnimatedSprite2D.flip_h = direction.x > 0
 
 func damage():
-	print("Me han hecho pupa")
+	queue_free()

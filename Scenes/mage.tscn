@@ -34,3 +34,5 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_1qmh0")
 animation = &"move"
 frame_progress = 0.927976
+
+[node name="Speaker" type="AudioStreamPlayer2D" parent="."]

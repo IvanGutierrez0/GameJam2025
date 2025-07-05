@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
+	$Speaker.play()
 	$Timer.stop()
 	$PointLight2D.show()
 	$Animation.animation = "explosion"
