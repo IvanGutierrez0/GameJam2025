@@ -12,8 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://dy46fn32bkjfd" path="res://Sprites/VFX/pop2.png" id="9_yvj50"]
 [ext_resource type="Texture2D" uid="uid://bklw2udglahw1" path="res://Sprites/VFX/pop3.png" id="10_5x5t3"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bbshb"]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_1qmh0"]
 animations = [{
 "frames": [{
@@ -73,19 +71,22 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbshb"]
+
 [node name="Muncher" type="Area2D" groups=["Enemy"]]
 script = ExtResource("1_17kl8")
 metadata/_edit_group_ = true
 
-[node name="KillingArea" type="CollisionShape2D" parent="."]
-scale = Vector2(1.5, 1)
-shape = SubResource("CircleShape2D_bbshb")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_1qmh0")
-animation = &"dead"
+animation = &"angry"
 autoplay = "chill"
+
+[node name="KillingArea" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 1.999)
+shape = SubResource("CircleShape2D_bbshb")
 
 [node name="Speaker" type="AudioStreamPlayer2D" parent="."]
 

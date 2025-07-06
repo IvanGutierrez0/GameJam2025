@@ -123,7 +123,7 @@ tile_set = SubResource("TileSet_kry3j")
 [node name="Projectiles" type="Node2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("17_pgwfc")]
-position = Vector2(276, 234)
+position = Vector2(212, 232)
 lightEnergy = 1.0
 gameOverScene = "res://Scenes/game_over3.tscn"
 
@@ -469,6 +469,10 @@ rotation = 3.14159
 position = Vector2(5232, 1552)
 rotation = 3.14159
 
+[node name="Goal" parent="." instance=ExtResource("6_vwkqt")]
+position = Vector2(3300, 1876)
+nextLevel = "res://Scenes/escena_ganar.tscn"
+
 [node name="Items" type="Node2D" parent="."]
 
 [node name="HeartItem" parent="Items" instance=ExtResource("5_vn7r1")]
@@ -476,9 +480,6 @@ position = Vector2(5392, 1093)
 
 [node name="HeartItem2" parent="Items" instance=ExtResource("5_vn7r1")]
 position = Vector2(5401, 1605)
-
-[node name="Goal" parent="Items" instance=ExtResource("6_vwkqt")]
-position = Vector2(3300, 1876)
 
 [node name="BlueCoin" parent="Items" instance=ExtResource("13_wffsm")]
 position = Vector2(912, 135)
@@ -531,10 +532,13 @@ path = [Vector2(0, 0), Vector2(300, 0)]
 [node name="Mage2" parent="Enemies" instance=ExtResource("16_dw3di")]
 position = Vector2(1775, 241)
 path = [Vector2(0, 0), Vector2(450, 0)]
+health = 2
 
 [node name="Bat" parent="Enemies" instance=ExtResource("17_qia21")]
 position = Vector2(3928, 1298)
 path = [Vector2(0, 0), Vector2(300, 0)]
+followDistance = 300
+health = 2
 
 [node name="Bat2" parent="Enemies" instance=ExtResource("17_qia21")]
 position = Vector2(4994, 1199)
@@ -543,7 +547,10 @@ path = [Vector2(0, 0), Vector2(150, 0)]
 [node name="Mage3" parent="Enemies" instance=ExtResource("16_dw3di")]
 position = Vector2(4748, 1103)
 path = [Vector2(0, 0), Vector2(400, 0)]
+health = 2
 
 [node name="Muncher" parent="Enemies" instance=ExtResource("18_tg0qr")]
 position = Vector2(4736, 1500)
-path = [Vector2(-150, 0), Vector2(-150, 0)]
+path = [Vector2(-300, 0), Vector2(300, 0)]
+followDistance = 100
+health = 3
