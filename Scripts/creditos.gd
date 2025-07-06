@@ -31,7 +31,3 @@ func _on_salir_pressed():
 
 func _on_musica_finished():
 	$AudioStreamPlayer.play()
-
-
-func _on_creditos_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/creditos.tscn")

@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcuicngj64lso"]
+
+[ext_resource type="Script" uid="uid://re1vk67dd7o" path="res://Scripts/creditos.gd" id="1_3rbuu"]
+[ext_resource type="Texture2D" uid="uid://bolpgolnvmni0" path="res://Sprites/Background/fondocredito.png" id="1_cysqe"]
+[ext_resource type="Texture2D" uid="uid://cspif7u4hxq0d" path="res://Sprites/UI/jugar.png" id="2_3rbuu"]
+[ext_resource type="Texture2D" uid="uid://dau77kpplpkhp" path="res://Sprites/UI/salir.png" id="3_fb38b"]
+[ext_resource type="AudioStream" uid="uid://y0e0ql87s4y3" path="res://Audio/Music/ganar.mp3" id="4_uc6c3"]
+[ext_resource type="Texture2D" uid="uid://dcmktoi5p3kdr" path="res://Sprites/UI/Intitulado_25.png" id="6_qi66g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3rbuu")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -200.0
+offset_right = 12.0
+offset_bottom = 176.0
+texture = ExtResource("1_cysqe")
+
+[node name="Jugar" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.737
+anchor_top = 0.39
+anchor_right = 0.955
+anchor_bottom = 0.5
+offset_left = 0.976013
+offset_top = -12.72
+offset_right = -0.160034
+offset_bottom = 6.0
+texture_normal = ExtResource("2_3rbuu")
+stretch_mode = 0
+
+[node name="Salir" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.748
+anchor_top = 0.52
+anchor_right = 0.951
+anchor_bottom = 0.664
+offset_left = 0.303955
+offset_top = 3.03998
+offset_right = 16.448
+offset_bottom = -0.272034
+texture_normal = ExtResource("3_fb38b")
+stretch_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_uc6c3")
+volume_db = 6.5
+autoplay = true
+
+[node name="Intitulado25" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1057, 570)
+scale = Vector2(1.72266, 1.80469)
+texture = ExtResource("6_qi66g")
+
+[node name="TextEdit" type="Label" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 77.0
+offset_right = 1117.0
+offset_bottom = 613.0
+text = "
+Iván Gutierrez Garcia
+Pablo  de la Torre Roldán
+Francisco Lorente Giménez
+Jose Rodríguez Fernández
+Fernando José Gracia Choin
+
+
+
+
+Luis Maria Gracia Choin
+El Coviran
+El chino de detrás de la facultad
+El café
+Los Organizadores
+La ETSIIT
+"
+
+[node name="TextEdit" type="Label" parent="TextEdit"]
+layout_mode = 0
+offset_left = -52.0
+offset_top = -27.0
+offset_right = 593.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 30
+text = "Desarrolladores:"
+
+[node name="TextEdit2" type="Label" parent="TextEdit"]
+layout_mode = 0
+offset_left = -52.0
+offset_top = 208.0
+offset_right = 593.0
+offset_bottom = 283.0
+theme_override_font_sizes/font_size = 30
+text = "Agradecimientos a:"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://tyn5lucw2xff"]
+[gd_scene load_steps=13 format=3 uid="uid://tyn5lucw2xff"]
 
 [ext_resource type="Script" uid="uid://elajm7hu6ql5" path="res://Scripts/escena_ganar.gd" id="1_tioyc"]
 [ext_resource type="Texture2D" uid="uid://cdh71fcfrqu6g" path="res://Sprites/Background/win.png" id="2_3fr76"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Scripts/PlayerWin.gd" id="6_s4aio"]
 [ext_resource type="Texture2D" uid="uid://cspif7u4hxq0d" path="res://Sprites/UI/jugar.png" id="7_mhssg"]
 [ext_resource type="Texture2D" uid="uid://dau77kpplpkhp" path="res://Sprites/UI/salir.png" id="8_4mvck"]
+[ext_resource type="Texture2D" uid="uid://ifsnu0xny282" path="res://Sprites/UI/creditos.png" id="8_lfr4r"]
 [ext_resource type="AudioStream" uid="uid://y0e0ql87s4y3" path="res://Audio/Music/ganar.mp3" id="9_mjj34"]
 [ext_resource type="Texture2D" uid="uid://b768mdq6ui36d" path="res://Sprites/UI/victoria.png" id="10_l2qrh"]
 
@@ -65,11 +66,26 @@ anchor_left = 0.737
 anchor_top = 0.39
 anchor_right = 0.955
 anchor_bottom = 0.5
-offset_left = 0.976013
-offset_top = -12.72
-offset_right = -0.160034
-offset_bottom = 6.0
+offset_left = 1.97601
+offset_top = -88.72
+offset_right = 0.839966
+offset_bottom = -70.0
 texture_normal = ExtResource("7_mhssg")
+stretch_mode = 0
+
+[node name="Creditos" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.737
+anchor_top = 0.39
+anchor_right = 0.955
+anchor_bottom = 0.5
+offset_left = 5.97601
+offset_top = 3.28001
+offset_right = 4.83997
+offset_bottom = 62.0
+texture_normal = ExtResource("8_lfr4r")
 stretch_mode = 0
 
 [node name="Salir" type="TextureButton" parent="."]
@@ -81,9 +97,9 @@ anchor_top = 0.52
 anchor_right = 0.951
 anchor_bottom = 0.664
 offset_left = 0.303955
-offset_top = 3.03998
+offset_top = 45.04
 offset_right = 16.448
-offset_bottom = -0.272034
+offset_bottom = 41.728
 texture_normal = ExtResource("8_4mvck")
 stretch_mode = 0
 
@@ -97,3 +113,5 @@ texture_filter = 1
 position = Vector2(258, 197)
 scale = Vector2(6.41667, 6.375)
 texture = ExtResource("10_l2qrh")
+
+[connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
