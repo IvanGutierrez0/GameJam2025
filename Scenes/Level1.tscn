@@ -403,25 +403,32 @@ position = Vector2(1904, 560)
 position = Vector2(1936, 560)
 
 [node name="Spikes10" parent="Traps" instance=ExtResource("28_4rcpl")]
-position = Vector2(2576, 560)
+position = Vector2(2576, 545)
+scale = Vector2(1, 2)
 
 [node name="Spikes11" parent="Traps" instance=ExtResource("28_4rcpl")]
-position = Vector2(2608, 560)
+position = Vector2(2608, 545)
+scale = Vector2(1, 2)
 
 [node name="Spikes12" parent="Traps" instance=ExtResource("28_4rcpl")]
-position = Vector2(2735, 560)
+position = Vector2(2735, 545)
+scale = Vector2(1, 2)
 
 [node name="Spikes13" parent="Traps" instance=ExtResource("28_4rcpl")]
-position = Vector2(2768, 560)
+position = Vector2(2768, 545)
+scale = Vector2(1, 2)
 
 [node name="Spikes14" parent="Traps" instance=ExtResource("28_4rcpl")]
-position = Vector2(2768, 560)
+position = Vector2(2768, 545)
+scale = Vector2(1, 2)
 
 [node name="Spikes15" parent="Traps" instance=ExtResource("28_4rcpl")]
-position = Vector2(2928, 560)
+position = Vector2(2928, 545)
+scale = Vector2(1, 2)
 
 [node name="Spikes16" parent="Traps" instance=ExtResource("28_4rcpl")]
-position = Vector2(2960, 560)
+position = Vector2(2960, 545)
+scale = Vector2(1, 2)
 
 [node name="Items" type="Node2D" parent="."]
 position = Vector2(-173, 352)

@@ -22,15 +22,12 @@ func _ready():
 
 
 func _on_jugar_pressed():
-	print("¡Botón JUGAR pulsado!")
-	get_tree().change_scene_to_file("res://escena_principal.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Level1.tscn")
 
 
 func _on_salir_pressed():
-	print("¡Botón SALIR pulsado!")
 	get_tree().quit()
 
 
 func _on_musica_finished():
 	$AudioStreamPlayer.play()
-

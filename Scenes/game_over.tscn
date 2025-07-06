@@ -70,6 +70,7 @@ stretch_mode = 0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_uw8dw")
+volume_db = -3.0
 autoplay = true
 
 [node name="Ded" type="Sprite2D" parent="."]

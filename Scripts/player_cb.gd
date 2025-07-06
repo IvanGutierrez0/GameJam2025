@@ -106,7 +106,7 @@ func _on_damage_area_area_entered(area: Area2D) -> void:
 	main.setPlayerLifes(health)
 	
 	if health <= 0: 
-		hide()
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
 
 func blind() -> void:
 	transparency = 1

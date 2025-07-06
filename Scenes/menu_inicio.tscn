@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://datxi8lafxpqk" path="res://Sprites/Player/ChilldeCojones.png" id="5_u1jxb"]
 [ext_resource type="AudioStream" uid="uid://c0vmvc32omab8" path="res://Audio/Music/musicamenu.mp3" id="6_r1ml1"]
 [ext_resource type="Texture2D" uid="uid://cspif7u4hxq0d" path="res://Sprites/UI/jugar.png" id="8_a4grk"]
-[ext_resource type="Script" path="res://Scripts/PlayerMenu.gd" id="8_f0uj6"]
+[ext_resource type="Script" uid="uid://l3f0kawsddip" path="res://Scripts/PlayerMenu.gd" id="8_f0uj6"]
 [ext_resource type="Texture2D" uid="uid://dau77kpplpkhp" path="res://Sprites/UI/salir.png" id="9_tq17b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vjw3m"]
@@ -93,4 +93,5 @@ stretch_mode = 0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_r1ml1")
+volume_db = -24.0
 autoplay = true
