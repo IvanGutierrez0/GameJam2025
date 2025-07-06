@@ -11,6 +11,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		$AnimatedSprite2D.animation = "lit"
 		$AnimatedSprite2D.play()
+		$PointLight2D.energy = 1
 		$Speaker.play()
 
 func _on_speaker_finished() -> void:
