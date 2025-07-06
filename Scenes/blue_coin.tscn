@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7sn4h4dti8y5"]
+[gd_scene load_steps=10 format=3 uid="uid://b7sn4h4dti8y5"]
 
 [ext_resource type="Script" uid="uid://cvq518rvcu7o3" path="res://Scripts/blue_coin.gd" id="1_udap7"]
 [ext_resource type="Texture2D" uid="uid://ccdyy0s35jjyr" path="res://Sprites/Items/Coins/FuegoFatuoAzul4.png" id="2_4d02t"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://deb3vq5dyj4p0" path="res://Sprites/Items/Coins/FuegoFatuoAzul1.png" id="4_pw6r6"]
 [ext_resource type="Texture2D" uid="uid://gawkgkmdc4n5" path="res://Sprites/Items/Coins/FuegoFatuoAzul2.png" id="5_1keab"]
 [ext_resource type="Texture2D" uid="uid://c820vvs1nb2i6" path="res://Sprites/Items/Coins/FuegoFatuoAzul3.png" id="6_lipnf"]
+[ext_resource type="Texture2D" uid="uid://qymwaxgha4h0" path="res://Sprites/VFX/Light.png" id="7_4d02t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_71rdb"]
 animations = [{
@@ -49,6 +50,10 @@ animation = &"spin"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CapsuleShape2D_ff2gq")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_4d02t")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

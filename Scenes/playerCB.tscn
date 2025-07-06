@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://5xae681r6vjf"]
+[gd_scene load_steps=17 format=3 uid="uid://5xae681r6vjf"]
 
 [ext_resource type="Script" uid="uid://dbs8kfecm0tca" path="res://Scripts/player_cb.gd" id="1_2bwjg"]
 [ext_resource type="Texture2D" uid="uid://frec6h805s1a" path="res://Sprites/Player/Ded.png" id="2_i4kcx"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://chtrjhop0jh6d" path="res://Sprites/VFX/Flash.png" id="8_nji1o"]
 [ext_resource type="AudioStream" uid="uid://be0cy7q0g104d" path="res://Audio/Music/gameplay.mp3" id="9_nji1o"]
 [ext_resource type="Texture2D" uid="uid://qymwaxgha4h0" path="res://Sprites/VFX/Light.png" id="9_qyl7a"]
+[ext_resource type="AudioStream" uid="uid://bmg1vpugt80le" path="res://Audio/SFX/HealthGain.mp3" id="13_titrn"]
+[ext_resource type="AudioStream" uid="uid://dp3r00epaldw2" path="res://Audio/SFX/HealthLoss.mp3" id="14_nhg2x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i7csx"]
 animations = [{
@@ -152,6 +154,12 @@ autoplay = true
 parameters/looping = false
 
 [node name="Listener" type="AudioListener2D" parent="Audio"]
+
+[node name="HeartGain" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("13_titrn")
+
+[node name="HeartLoss" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("14_nhg2x")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="DamageArea" to="." method="_on_damage_area_area_entered"]

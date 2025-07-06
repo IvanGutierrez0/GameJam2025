@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var nextLevel = ""
+var goalActivated = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,7 +9,8 @@ func _ready() -> void:
 	$AnimatedSprite2D.play()
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") and not goalActivated:
+		goalActivated = true
 		$AnimatedSprite2D.animation = "lit"
 		$AnimatedSprite2D.play()
 		$PointLight2D.energy = 1

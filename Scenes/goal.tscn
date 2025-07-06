@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dg2v3k3rj38ak"]
+[gd_scene load_steps=9 format=3 uid="uid://dg2v3k3rj38ak"]
 
 [ext_resource type="Script" uid="uid://4v2a7iqeba1e" path="res://Scripts/goal.gd" id="1_egnc4"]
 [ext_resource type="Texture2D" uid="uid://y7x303xbpxsm" path="res://Sprites/Background/candles2.png" id="2_qmc6d"]
 [ext_resource type="Texture2D" uid="uid://6247s3lrc0s3" path="res://Sprites/Background/candles3.png" id="3_gwps8"]
 [ext_resource type="Texture2D" uid="uid://ctbh6nr86vv11" path="res://Sprites/Background/candles1.png" id="4_djj4k"]
 [ext_resource type="Texture2D" uid="uid://qymwaxgha4h0" path="res://Sprites/VFX/Light.png" id="5_4kiys"]
+[ext_resource type="AudioStream" uid="uid://dq6li3nj2k8xr" path="res://Audio/SFX/WinSound.mp3" id="6_qmc6d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8fax4"]
 animations = [{
@@ -50,9 +51,7 @@ scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_dadr8")
 
 [node name="Speaker" type="AudioStreamPlayer2D" parent="."]
-
-[node name="Speaker2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_qmc6d")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="Speaker" to="." method="_on_speaker_finished"]
-[connection signal="finished" from="Speaker2" to="." method="_on_speaker_finished"]

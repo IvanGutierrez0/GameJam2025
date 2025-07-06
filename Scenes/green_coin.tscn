@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://r5ggehhdur5o"]
+[gd_scene load_steps=9 format=3 uid="uid://r5ggehhdur5o"]
 
 [ext_resource type="Script" uid="uid://cwlho5qravc0k" path="res://Scripts/green_coin.gd" id="1_kp5qq"]
 [ext_resource type="Texture2D" uid="uid://d0o0yakv6fgni" path="res://Sprites/Items/Coins/FuegoFatuoVerde4.png" id="2_kp5qq"]
 [ext_resource type="Texture2D" uid="uid://d14js3ap4o4a2" path="res://Sprites/Items/Coins/FuegoFatuoVerde3.png" id="3_up5vu"]
 [ext_resource type="Texture2D" uid="uid://cjrkxp60rvxtw" path="res://Sprites/Items/Coins/FuegoFatuoVerde1.png" id="4_arshc"]
 [ext_resource type="Texture2D" uid="uid://dkfrvomw2p1tc" path="res://Sprites/Items/Coins/FuegoFatuoVerde2.png" id="5_2fawp"]
+[ext_resource type="Texture2D" uid="uid://qymwaxgha4h0" path="res://Sprites/VFX/Light.png" id="6_up5vu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_71rdb"]
 animations = [{
@@ -46,6 +47,10 @@ animation = &"pickup"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_kp5qq")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_up5vu")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
