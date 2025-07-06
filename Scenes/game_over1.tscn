@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://dlolwdupcr4gs"]
+
+[ext_resource type="Texture2D" uid="uid://b0jnsukh1mvr" path="res://Sprites/Background/cementerio.png" id="1_ljbk0"]
+[ext_resource type="Script" uid="uid://cv8ir40v32nt6" path="res://Scripts/game_over.gd" id="1_tuwv6"]
+[ext_resource type="Texture2D" uid="uid://bvelcvnhkcbxx" path="res://Sprites/UI/Intitulado_34.png" id="2_shkgo"]
+[ext_resource type="Texture2D" uid="uid://dau77kpplpkhp" path="res://Sprites/UI/salir.png" id="3_suuj2"]
+[ext_resource type="Texture2D" uid="uid://frec6h805s1a" path="res://Sprites/Player/Ded.png" id="5_7wwa7"]
+[ext_resource type="AudioStream" uid="uid://dtgcxn2ythp52" path="res://Audio/Music/gameover.mp3" id="5_uw8dw"]
+[ext_resource type="Texture2D" uid="uid://bncqgwjisq5bm" path="res://Sprites/UI/gameover.png" id="7_ihu1v"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_y2816"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tuwv6")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -173.0
+offset_right = 232.0
+offset_bottom = 203.0
+texture = ExtResource("1_ljbk0")
+
+[node name="PointLight2D" type="PointLight2D" parent="TextureRect3"]
+position = Vector2(934, 492)
+scale = Vector2(0.0208249, 0.0284786)
+color = Color(0, 1, 1, 0)
+energy = 9.7
+texture = SubResource("ImageTexture_y2816")
+
+[node name="Jugar" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.737
+anchor_top = 0.39
+anchor_right = 0.955
+anchor_bottom = 0.5
+offset_left = 0.976013
+offset_top = -52.72
+offset_right = -0.160034
+offset_bottom = -34.0
+scale = Vector2(1, 1.5)
+texture_normal = ExtResource("2_shkgo")
+stretch_mode = 0
+
+[node name="Salir" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.748
+anchor_top = 0.52
+anchor_right = 0.951
+anchor_bottom = 0.664
+offset_left = 0.303955
+offset_top = 3.03998
+offset_right = 16.448
+offset_bottom = -0.272034
+texture_normal = ExtResource("3_suuj2")
+stretch_mode = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_uw8dw")
+autoplay = true
+
+[node name="Ded" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(572, 505)
+scale = Vector2(9.36719, 10.5391)
+texture = ExtResource("5_7wwa7")
+
+[node name="Gameover" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(291, 228)
+rotation = -0.291643
+scale = Vector2(3.57812, 3.04687)
+texture = ExtResource("7_ihu1v")

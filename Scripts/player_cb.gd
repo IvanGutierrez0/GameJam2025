@@ -11,6 +11,8 @@ var lastDirection = 1
 @export var lightEnergy = 0.5
 var transparency = 0
 
+@export var gameOverScene = ""
+
 var main
 
 var flashbang_scene = preload("res://Scenes/flashbang.tscn")
@@ -111,7 +113,7 @@ func _on_damage_area_area_entered(area: Area2D) -> void:
 	main.setPlayerLifes(health)
 	
 	if health <= 0: 
-		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		get_tree().change_scene_to_file(gameOverScene)
 
 func blind() -> void:
 	transparency = 1
