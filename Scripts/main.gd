@@ -1,12 +1,16 @@
 extends Node2D
 
+@export var offsetX = 2.0
+@export var offsetY = 1.5
+
+
 var health = 3
 var hud
 
 func _ready() -> void:
 	hud = get_node("./Player/HUD")
-	$ParallaxBackground.offset.x = 2 * $Player.position.x
-	$ParallaxBackground.offset.y = 1.5 * $Player.position.y
+	$ParallaxBackground.offset.x = offsetX * $Player.position.x
+	$ParallaxBackground.offset.y = offsetY * $Player.position.y
 
 func _process(delta: float) -> void:
 	pass

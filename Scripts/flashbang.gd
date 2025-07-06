@@ -17,7 +17,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:	
 	if $Timer.is_stopped():
 		$PointLight2D.energy -= 0.005
-
+		if $PointLight2D.energy <= 0:
+			queue_free()
 
 func _on_timer_timeout() -> void:
 	$Speaker.play()

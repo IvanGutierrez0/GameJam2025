@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://qd85xgd5g6kw"]
+[gd_scene load_steps=15 format=4 uid="uid://qd85xgd5g6kw"]
 
 [ext_resource type="Script" uid="uid://cvwate1nwsar8" path="res://Scripts/main.gd" id="1_kry3j"]
 [ext_resource type="PackedScene" uid="uid://c6cp5fen3472r" path="res://Scenes/mage.tscn" id="2_8gbba"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://civfdlhs0easy" path="res://Scenes/red_coin.tscn" id="8_6iyac"]
 [ext_resource type="PackedScene" uid="uid://r5ggehhdur5o" path="res://Scenes/green_coin.tscn" id="9_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://dhtjl5yg3lxi2" path="res://Scenes/parallax_background.tscn" id="10_hptm8"]
+[ext_resource type="PackedScene" uid="uid://b6oy02bxx5wms" path="res://Scenes/sun.tscn" id="12_6iyac"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jjvhh"]
 texture = ExtResource("3_8gbba")
@@ -71,3 +72,5 @@ position = Vector2(768, 165)
 position = Vector2(818, 165)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("10_hptm8")]
+
+[node name="Sun" parent="." instance=ExtResource("12_6iyac")]

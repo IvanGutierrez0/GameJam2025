@@ -70,20 +70,13 @@ func spawnFlashbang(direction) -> void:
 	flashbang.linear_velocity = Vector2(250 * direction + velocity.x, -250)
 	
 	projectiles_container = get_tree().get_root().get_node("Main/Projectiles")
-	
 	projectiles_container.add_child(flashbang)
-	
-	$Timers/FlashbangTimer.start()
 
 func _on_inmunity_timer_timeout() -> void:
 	$Timers/InmunityTimer.stop()
 
 func _on_power_timer_timeout() -> void:
 	$Timers/PowerTimer.stop()
-
-func _on_flashbang_timer_timeout() -> void:
-	$Timers/FlashbangTimer.stop()
-	projectiles_container.remove_child(flashbang)
 
 func _on_damage_area_area_entered(area: Area2D) -> void:
 	if $Timers/InmunityTimer.is_stopped() and area.is_in_group("Enemy"):

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bxvwydn842bbm" path="res://Sprites/Player/Estico.png" id="3_cgsol"]
 [ext_resource type="Texture2D" uid="uid://dmb7ql1cmxqga" path="res://Sprites/Player/PaAbajo.png" id="4_vpwf8"]
 [ext_resource type="Texture2D" uid="uid://datxi8lafxpqk" path="res://Sprites/Player/ChilldeCojones.png" id="5_sd7ko"]
-[ext_resource type="Script" uid="uid://pihn6ok4nfjj" path="res://Scripts/PlayerWin.gd" id="6_s4aio"]
+[ext_resource type="Script" path="res://Scripts/PlayerWin.gd" id="6_s4aio"]
 [ext_resource type="Texture2D" uid="uid://cspif7u4hxq0d" path="res://Sprites/UI/jugar.png" id="7_mhssg"]
 [ext_resource type="Texture2D" uid="uid://dau77kpplpkhp" path="res://Sprites/UI/salir.png" id="8_4mvck"]
 [ext_resource type="AudioStream" uid="uid://y0e0ql87s4y3" path="res://Audio/Music/ganar.mp3" id="9_mjj34"]

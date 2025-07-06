@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://5xae681r6vjf"]
+[gd_scene load_steps=13 format=3 uid="uid://5xae681r6vjf"]
 
 [ext_resource type="Script" uid="uid://dbs8kfecm0tca" path="res://Scripts/player_cb.gd" id="1_2bwjg"]
 [ext_resource type="Texture2D" uid="uid://frec6h805s1a" path="res://Sprites/Player/Ded.png" id="2_i4kcx"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://q7ko02ogrkjn" path="res://Sprites/Player/PaArriba.png" id="4_i4kcx"]
 [ext_resource type="Texture2D" uid="uid://chtrjhop0jh6d" path="res://Sprites/VFX/Flash.png" id="8_nji1o"]
 [ext_resource type="AudioStream" uid="uid://be0cy7q0g104d" path="res://Audio/Music/gameplay.mp3" id="9_nji1o"]
+[ext_resource type="Texture2D" uid="uid://qymwaxgha4h0" path="res://Sprites/VFX/Light.png" id="9_qyl7a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i7csx"]
 animations = [{
@@ -104,10 +105,7 @@ position_smoothing_speed = 2.0
 wait_time = 2.0
 
 [node name="PowerTimer" type="Timer" parent="Timers" groups=["Player"]]
-wait_time = 3.0
-
-[node name="FlashbangTimer" type="Timer" parent="Timers"]
-wait_time = 2.5
+wait_time = 1.5
 
 [node name="FlashedTimer" type="Timer" parent="Timers"]
 wait_time = 3.0
@@ -126,8 +124,8 @@ animation = &"show"
 autoplay = "hide"
 
 [node name="DynamicLight" type="PointLight2D" parent="."]
-energy = 0.0
-texture = ExtResource("8_nji1o")
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("9_qyl7a")
 
 [node name="Audio" type="Node2D" parent="."]
 
@@ -142,5 +140,4 @@ parameters/looping = false
 [connection signal="area_entered" from="DamageArea" to="." method="_on_damage_area_area_entered"]
 [connection signal="timeout" from="Timers/InmunityTimer" to="." method="_on_inmunity_timer_timeout"]
 [connection signal="timeout" from="Timers/PowerTimer" to="." method="_on_power_timer_timeout"]
-[connection signal="timeout" from="Timers/FlashbangTimer" to="." method="_on_flashbang_timer_timeout"]
 [connection signal="timeout" from="Timers/FlashedTimer" to="." method="_on_flashed_timer_timeout"]

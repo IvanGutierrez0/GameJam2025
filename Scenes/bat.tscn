@@ -22,6 +22,7 @@ animations = [{
 
 [node name="Bat" type="Area2D" groups=["Enemy"]]
 script = ExtResource("1_wt6c1")
+metadata/_edit_group_ = true
 
 [node name="KillingArea" type="CollisionShape2D" parent="."]
 scale = Vector2(1.5, 1)

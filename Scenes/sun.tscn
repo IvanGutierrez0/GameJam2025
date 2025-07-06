@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6oy02bxx5wms"]
+
+[ext_resource type="Script" uid="uid://cqb7u2m3gav3x" path="res://Scripts/Sun.gd" id="1_02gdu"]
+
+[node name="Sun" type="DirectionalLight2D"]
+energy = 0.0
+script = ExtResource("1_02gdu")
