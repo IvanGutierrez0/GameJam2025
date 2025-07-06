@@ -1,40 +1,40 @@
 [gd_scene load_steps=56 format=4 uid="uid://b2owsse2xf3yk"]
 
-[ext_resource type="Script" uid="uid://cvwate1nwsar8" path="res://Scripts/main.gd" id="1_o0dvq"]
-[ext_resource type="Texture2D" uid="uid://btvwpxt8w5lb6" path="res://Sprites/Tiles/ground.png" id="1_p7e7r"]
-[ext_resource type="Texture2D" uid="uid://cogb6nw7ysusr" path="res://Sprites/Tiles/linturnio-ezgif.com-webp-to-png-converter.png" id="2_ls2kf"]
-[ext_resource type="Texture2D" uid="uid://co0skk0d1sjpi" path="res://Sprites/Tiles/piedras/piedra206.png" id="3_xgbmw"]
-[ext_resource type="Texture2D" uid="uid://t6wcoqn26xio" path="res://Sprites/Tiles/piedras/piedra207.png" id="4_ig26m"]
-[ext_resource type="Texture2D" uid="uid://s36116bswseo" path="res://Sprites/Tiles/piedras/piedra208.png" id="5_5jqlr"]
-[ext_resource type="Texture2D" uid="uid://b6k4wv4a5dvxc" path="res://Sprites/Tiles/piedras/piedra209.png" id="6_bjuv0"]
-[ext_resource type="Texture2D" uid="uid://c5qpaqhp821l" path="res://Sprites/Tiles/piedras/piedra210.png" id="7_7vwtc"]
-[ext_resource type="Texture2D" uid="uid://dvuixq13p1wx0" path="res://Sprites/Tiles/piedras/piedra211.png" id="8_wd4tu"]
-[ext_resource type="Texture2D" uid="uid://dbd5urwnmxtf6" path="res://Sprites/Tiles/piedras/piedra212.png" id="9_byh8v"]
-[ext_resource type="Texture2D" uid="uid://bmr18os4pkchx" path="res://Sprites/Tiles/piedras/piedra213.png" id="10_nuthj"]
-[ext_resource type="Texture2D" uid="uid://ckmb61nlom0f4" path="res://Sprites/Tiles/piedras/piedra214.png" id="11_ovqx1"]
-[ext_resource type="Texture2D" uid="uid://35jwlxpumiq0" path="res://Sprites/Tiles/piedras/piedra215.png" id="12_q3j1c"]
-[ext_resource type="Texture2D" uid="uid://cgnex31egytg5" path="res://Sprites/Tiles/New_Piskel.png" id="13_xu2yf"]
-[ext_resource type="Texture2D" uid="uid://cupc3tm5hm2hr" path="res://Sprites/Tiles/piedras/piedra216.png" id="14_tynpw"]
-[ext_resource type="Texture2D" uid="uid://d0msnoyj7uhcj" path="res://Sprites/Tiles/piedras/linturnio-16.png-ezgif.com-webp-to-png-converter.png" id="15_62h65"]
-[ext_resource type="Texture2D" uid="uid://biutivo885bld" path="res://Sprites/Tiles/piedras/piedra200.png" id="16_5wq7r"]
-[ext_resource type="Texture2D" uid="uid://bxaxg4l4tilw5" path="res://Sprites/Tiles/piedras/piedra201.png" id="17_q0800"]
-[ext_resource type="Texture2D" uid="uid://r6ctfmskl307" path="res://Sprites/Tiles/piedras/piedra202.png" id="18_wqus2"]
-[ext_resource type="Texture2D" uid="uid://gmpthrbxg1sy" path="res://Sprites/Tiles/piedras/piedra203.png" id="19_enjk3"]
-[ext_resource type="Texture2D" uid="uid://4xt6w7j1o61f" path="res://Sprites/Tiles/piedras/piedra204.png" id="20_5qra5"]
-[ext_resource type="Texture2D" uid="uid://c4p5cufwadsw5" path="res://Sprites/Tiles/piedras/piedra205.png" id="21_g5xki"]
-[ext_resource type="PackedScene" uid="uid://5xae681r6vjf" path="res://Scenes/playerCB.tscn" id="22_384de"]
-[ext_resource type="PackedScene" uid="uid://w1eqyqepoxjm" path="res://Scenes/hud.tscn" id="23_bhaf5"]
-[ext_resource type="PackedScene" uid="uid://dhtjl5yg3lxi2" path="res://Scenes/parallax_background.tscn" id="24_o0dvq"]
-[ext_resource type="PackedScene" uid="uid://c6cp5fen3472r" path="res://Scenes/mage.tscn" id="25_bhaf5"]
-[ext_resource type="PackedScene" uid="uid://dmn42v6h7uecx" path="res://Scenes/bat.tscn" id="27_1nrjw"]
-[ext_resource type="PackedScene" uid="uid://c8p81g0hcfpqo" path="res://Scenes/spikes.tscn" id="28_4rcpl"]
-[ext_resource type="PackedScene" uid="uid://b7sn4h4dti8y5" path="res://Scenes/blue_coin.tscn" id="28_ud1sj"]
-[ext_resource type="PackedScene" uid="uid://p7arpqugd27f" path="res://Scenes/heartItem.tscn" id="29_qvja8"]
-[ext_resource type="PackedScene" uid="uid://civfdlhs0easy" path="res://Scenes/red_coin.tscn" id="30_4rcpl"]
-[ext_resource type="PackedScene" uid="uid://b6oy02bxx5wms" path="res://Scenes/sun.tscn" id="31_qvja8"]
+[ext_resource type="Script" uid="uid://cvwate1nwsar8" path="res://Scripts/main.gd" id="1_4otl7"]
+[ext_resource type="Texture2D" uid="uid://btvwpxt8w5lb6" path="res://Sprites/Tiles/ground.png" id="2_p68j0"]
+[ext_resource type="Texture2D" uid="uid://cogb6nw7ysusr" path="res://Sprites/Tiles/linturnio-ezgif.com-webp-to-png-converter.png" id="3_c4ifa"]
+[ext_resource type="Texture2D" uid="uid://co0skk0d1sjpi" path="res://Sprites/Tiles/piedras/piedra206.png" id="4_daeh6"]
+[ext_resource type="Texture2D" uid="uid://t6wcoqn26xio" path="res://Sprites/Tiles/piedras/piedra207.png" id="5_dr50b"]
+[ext_resource type="Texture2D" uid="uid://s36116bswseo" path="res://Sprites/Tiles/piedras/piedra208.png" id="6_nstho"]
+[ext_resource type="Texture2D" uid="uid://b6k4wv4a5dvxc" path="res://Sprites/Tiles/piedras/piedra209.png" id="7_p4bhf"]
+[ext_resource type="Texture2D" uid="uid://c5qpaqhp821l" path="res://Sprites/Tiles/piedras/piedra210.png" id="8_tfirt"]
+[ext_resource type="Texture2D" uid="uid://dvuixq13p1wx0" path="res://Sprites/Tiles/piedras/piedra211.png" id="9_mwr0o"]
+[ext_resource type="Texture2D" uid="uid://dbd5urwnmxtf6" path="res://Sprites/Tiles/piedras/piedra212.png" id="10_8wyvm"]
+[ext_resource type="Texture2D" uid="uid://bmr18os4pkchx" path="res://Sprites/Tiles/piedras/piedra213.png" id="11_6knn8"]
+[ext_resource type="Texture2D" uid="uid://ckmb61nlom0f4" path="res://Sprites/Tiles/piedras/piedra214.png" id="12_tmxcw"]
+[ext_resource type="Texture2D" uid="uid://35jwlxpumiq0" path="res://Sprites/Tiles/piedras/piedra215.png" id="13_vb1ix"]
+[ext_resource type="Texture2D" uid="uid://cgnex31egytg5" path="res://Sprites/Tiles/New_Piskel.png" id="14_hrsvw"]
+[ext_resource type="Texture2D" uid="uid://cupc3tm5hm2hr" path="res://Sprites/Tiles/piedras/piedra216.png" id="15_wbvsf"]
+[ext_resource type="Texture2D" uid="uid://d0msnoyj7uhcj" path="res://Sprites/Tiles/piedras/linturnio-16.png-ezgif.com-webp-to-png-converter.png" id="16_2nobi"]
+[ext_resource type="Texture2D" uid="uid://biutivo885bld" path="res://Sprites/Tiles/piedras/piedra200.png" id="17_760o5"]
+[ext_resource type="Texture2D" uid="uid://bxaxg4l4tilw5" path="res://Sprites/Tiles/piedras/piedra201.png" id="18_xqgpj"]
+[ext_resource type="Texture2D" uid="uid://r6ctfmskl307" path="res://Sprites/Tiles/piedras/piedra202.png" id="19_44m78"]
+[ext_resource type="Texture2D" uid="uid://gmpthrbxg1sy" path="res://Sprites/Tiles/piedras/piedra203.png" id="20_ts7yu"]
+[ext_resource type="Texture2D" uid="uid://4xt6w7j1o61f" path="res://Sprites/Tiles/piedras/piedra204.png" id="21_mr61u"]
+[ext_resource type="Texture2D" uid="uid://c4p5cufwadsw5" path="res://Sprites/Tiles/piedras/piedra205.png" id="22_i2jya"]
+[ext_resource type="PackedScene" uid="uid://5xae681r6vjf" path="res://Scenes/playerCB.tscn" id="23_imc8n"]
+[ext_resource type="PackedScene" uid="uid://w1eqyqepoxjm" path="res://Scenes/hud.tscn" id="24_6e0xa"]
+[ext_resource type="PackedScene" uid="uid://dhtjl5yg3lxi2" path="res://Scenes/parallax_background.tscn" id="25_n1l2m"]
+[ext_resource type="PackedScene" uid="uid://c6cp5fen3472r" path="res://Scenes/mage.tscn" id="26_j77vw"]
+[ext_resource type="PackedScene" uid="uid://dmn42v6h7uecx" path="res://Scenes/bat.tscn" id="27_yc6fi"]
+[ext_resource type="PackedScene" uid="uid://c8p81g0hcfpqo" path="res://Scenes/spikes.tscn" id="28_qwb7q"]
+[ext_resource type="PackedScene" uid="uid://b7sn4h4dti8y5" path="res://Scenes/blue_coin.tscn" id="29_dm0y8"]
+[ext_resource type="PackedScene" uid="uid://p7arpqugd27f" path="res://Scenes/heartItem.tscn" id="30_43uat"]
+[ext_resource type="PackedScene" uid="uid://civfdlhs0easy" path="res://Scenes/red_coin.tscn" id="31_bi2ux"]
+[ext_resource type="PackedScene" uid="uid://b6oy02bxx5wms" path="res://Scenes/sun.tscn" id="32_eadek"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bk0ny"]
-texture = ExtResource("1_p7e7r")
+texture = ExtResource("2_p68j0")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -45,7 +45,7 @@ texture = ExtResource("1_p7e7r")
 3:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78b5h"]
-texture = ExtResource("2_ls2kf")
+texture = ExtResource("3_c4ifa")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -0.175247, -16, -16, 16, -16, 16, 16, -16, 16)
@@ -99,7 +99,7 @@ texture_region_size = Vector2i(32, 32)
 2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_myg5k"]
-texture = ExtResource("3_xgbmw")
+texture = ExtResource("4_daeh6")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -107,7 +107,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k8iqf"]
-texture = ExtResource("4_ig26m")
+texture = ExtResource("5_dr50b")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -115,7 +115,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sqety"]
-texture = ExtResource("5_5jqlr")
+texture = ExtResource("6_nstho")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -123,7 +123,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bi5x7"]
-texture = ExtResource("6_bjuv0")
+texture = ExtResource("7_p4bhf")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -131,7 +131,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jsmfd"]
-texture = ExtResource("7_7vwtc")
+texture = ExtResource("8_tfirt")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -139,7 +139,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjw44"]
-texture = ExtResource("8_wd4tu")
+texture = ExtResource("9_mwr0o")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -147,7 +147,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lyvv4"]
-texture = ExtResource("9_byh8v")
+texture = ExtResource("10_8wyvm")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -155,7 +155,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkosj"]
-texture = ExtResource("10_nuthj")
+texture = ExtResource("11_6knn8")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -163,7 +163,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_51njk"]
-texture = ExtResource("11_ovqx1")
+texture = ExtResource("12_tmxcw")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -171,7 +171,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_35awb"]
-texture = ExtResource("12_q3j1c")
+texture = ExtResource("13_vb1ix")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -179,7 +179,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sx5sx"]
-texture = ExtResource("13_xu2yf")
+texture = ExtResource("14_hrsvw")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -206,7 +206,7 @@ texture = ExtResource("13_xu2yf")
 3:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ara3"]
-texture = ExtResource("14_tynpw")
+texture = ExtResource("15_wbvsf")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -214,7 +214,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lgilh"]
-texture = ExtResource("2_ls2kf")
+texture = ExtResource("3_c4ifa")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -8.93759, -16, -16, 16, -16, 16, 16, -16, 16)
@@ -234,7 +234,7 @@ texture_region_size = Vector2i(32, 32)
 1:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_edrmg"]
-texture = ExtResource("15_62h65")
+texture = ExtResource("16_2nobi")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -271,14 +271,14 @@ texture_region_size = Vector2i(32, 32)
 0:27/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gooyw"]
-texture = ExtResource("16_5wq7r")
+texture = ExtResource("17_760o5")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ybnm"]
-texture = ExtResource("17_q0800")
+texture = ExtResource("18_xqgpj")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -286,7 +286,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1oyu"]
-texture = ExtResource("18_wqus2")
+texture = ExtResource("19_44m78")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -294,7 +294,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ypmq4"]
-texture = ExtResource("19_enjk3")
+texture = ExtResource("20_ts7yu")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -302,7 +302,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s5rn8"]
-texture = ExtResource("20_5qra5")
+texture = ExtResource("21_mr61u")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -310,7 +310,7 @@ texture_region_size = Vector2i(32, 32)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w53ki"]
-texture = ExtResource("21_g5xki")
+texture = ExtResource("22_i2jya")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -344,7 +344,7 @@ sources/20 = SubResource("TileSetAtlasSource_0ara3")
 sources/21 = SubResource("TileSetAtlasSource_lgilh")
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_o0dvq")
+script = ExtResource("1_4otl7")
 offsetX = 1.0
 offsetY = 0.9
 
@@ -355,97 +355,97 @@ tile_set = SubResource("TileSet_yn36l")
 
 [node name="Projectiles" type="Node2D" parent="."]
 
-[node name="Player" parent="." instance=ExtResource("22_384de")]
+[node name="Player" parent="." instance=ExtResource("23_imc8n")]
 position = Vector2(207, 585)
 lightEnergy = 1.0
 
-[node name="HUD" parent="Player" instance=ExtResource("23_bhaf5")]
-
-[node name="ParallaxBackground" parent="." instance=ExtResource("24_o0dvq")]
+[node name="HUD" parent="Player" instance=ExtResource("24_6e0xa")]
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Mage" parent="Enemies" instance=ExtResource("25_bhaf5")]
+[node name="Mage" parent="Enemies" instance=ExtResource("26_j77vw")]
 position = Vector2(1040, 562)
 path = [Vector2(0, 0), Vector2(352, 0)]
 
-[node name="Bat" parent="Enemies" instance=ExtResource("27_1nrjw")]
+[node name="Bat" parent="Enemies" instance=ExtResource("27_yc6fi")]
 position = Vector2(1994, 486)
 path = [Vector2(0, 0), Vector2(300, 0)]
 
 [node name="Traps" type="Node2D" parent="."]
 
-[node name="Spikes" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(1488, 560)
 
-[node name="Spikes2" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes2" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(1520, 560)
 
-[node name="Spikes3" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes3" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(1616, 560)
 
-[node name="Spikes4" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes4" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(1648, 560)
 
-[node name="Spikes5" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes5" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(1744, 560)
 
-[node name="Spikes6" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes6" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(1776, 560)
 
-[node name="Spikes7" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes7" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(1872, 560)
 
-[node name="Spikes8" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes8" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(1904, 560)
 
-[node name="Spikes9" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes9" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(1936, 560)
 
-[node name="Spikes10" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes10" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(2576, 545)
 scale = Vector2(1, 2)
 
-[node name="Spikes11" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes11" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(2608, 545)
 scale = Vector2(1, 2)
 
-[node name="Spikes12" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes12" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(2735, 545)
 scale = Vector2(1, 2)
 
-[node name="Spikes13" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes13" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(2768, 545)
 scale = Vector2(1, 2)
 
-[node name="Spikes14" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes14" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(2768, 545)
 scale = Vector2(1, 2)
 
-[node name="Spikes15" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes15" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(2928, 545)
 scale = Vector2(1, 2)
 
-[node name="Spikes16" parent="Traps" instance=ExtResource("28_4rcpl")]
+[node name="Spikes16" parent="Traps" instance=ExtResource("28_qwb7q")]
 position = Vector2(2960, 545)
 scale = Vector2(1, 2)
 
 [node name="Items" type="Node2D" parent="."]
 position = Vector2(-173, 352)
 
-[node name="BlueCoin" parent="Items" instance=ExtResource("28_ud1sj")]
+[node name="BlueCoin" parent="Items" instance=ExtResource("29_dm0y8")]
 position = Vector2(1164, 102)
 
-[node name="BlueCoin2" parent="Items" instance=ExtResource("28_ud1sj")]
+[node name="BlueCoin2" parent="Items" instance=ExtResource("29_dm0y8")]
 position = Vector2(1740, 132)
 
-[node name="BlueCoin3" parent="Items" instance=ExtResource("28_ud1sj")]
+[node name="BlueCoin3" parent="Items" instance=ExtResource("29_dm0y8")]
 position = Vector2(1998, 70)
 
-[node name="HeartItem" parent="Items" instance=ExtResource("29_qvja8")]
+[node name="HeartItem" parent="Items" instance=ExtResource("30_43uat")]
 position = Vector2(2841, 198)
 
-[node name="RedCoin" parent="Items" instance=ExtResource("30_4rcpl")]
+[node name="RedCoin" parent="Items" instance=ExtResource("31_bi2ux")]
 position = Vector2(3022, 193)
 
-[node name="Sun" parent="." instance=ExtResource("31_qvja8")]
+[node name="Sun" parent="." instance=ExtResource("32_eadek")]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("25_n1l2m")]

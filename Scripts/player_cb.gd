@@ -92,7 +92,7 @@ func _on_damage_area_area_entered(area: Area2D) -> void:
 		$Timers/InmunityTimer.start()
 		
 	elif area.is_in_group("Item"):
-		if area.name == "HeartItem":
+		if area.is_in_group("HeartItem"):
 			if health < 3:
 				health += 1
 				

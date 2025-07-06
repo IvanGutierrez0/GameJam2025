@@ -1,13 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmn42v6h7uecx"]
+[gd_scene load_steps=10 format=3 uid="uid://dmn42v6h7uecx"]
 
 [ext_resource type="Script" uid="uid://bxrrn4mhxsclf" path="res://Scripts/bat.gd" id="1_wt6c1"]
+[ext_resource type="Texture2D" uid="uid://c4ifgfl08wusv" path="res://Sprites/VFX/pop0.png" id="2_cawgt"]
 [ext_resource type="Texture2D" uid="uid://cu0dgu844joma" path="res://Sprites/Enemies/bat1.png" id="2_wt6c1"]
 [ext_resource type="Texture2D" uid="uid://dalracqcdwcf7" path="res://Sprites/Enemies/bat2.png" id="3_50dnf"]
+[ext_resource type="Texture2D" uid="uid://dqkdm3e541k0l" path="res://Sprites/VFX/pop1.png" id="3_fk7gk"]
+[ext_resource type="Texture2D" uid="uid://dy46fn32bkjfd" path="res://Sprites/VFX/pop2.png" id="4_c4xfn"]
+[ext_resource type="Texture2D" uid="uid://bklw2udglahw1" path="res://Sprites/VFX/pop3.png" id="5_h8o1q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bbshb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1qmh0"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cawgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fk7gk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c4xfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h8o1q")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_wt6c1")
@@ -31,7 +52,8 @@ shape = SubResource("CircleShape2D_bbshb")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_1qmh0")
-animation = &"move"
-frame_progress = 0.927976
+animation = &"dead"
 
 [node name="Speaker" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

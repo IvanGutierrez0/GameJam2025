@@ -1,0 +1,93 @@
+[gd_scene load_steps=14 format=3 uid="uid://cdikp8nq0km52"]
+
+[ext_resource type="Script" uid="uid://6cj7eladenil" path="res://Scripts/muncher.gd" id="1_17kl8"]
+[ext_resource type="Texture2D" uid="uid://blji7p3k1b46s" path="res://Sprites/Enemies/Angry2.png" id="2_4nles"]
+[ext_resource type="Texture2D" uid="uid://bglum1dues31s" path="res://Sprites/Enemies/chill2.png" id="2_j6l1d"]
+[ext_resource type="Texture2D" uid="uid://cvg5gue5amnku" path="res://Sprites/Enemies/Angry1.png" id="2_r4s3e"]
+[ext_resource type="Texture2D" uid="uid://31fxgr3xjrlv" path="res://Sprites/Enemies/chill1.png" id="3_4nles"]
+[ext_resource type="Texture2D" uid="uid://bcnfghagcq7gj" path="res://Sprites/Enemies/chill3.png" id="4_r4s3e"]
+[ext_resource type="Texture2D" uid="uid://cgo08baioqmnt" path="res://Sprites/Enemies/getAngry.png" id="5_h8qak"]
+[ext_resource type="Texture2D" uid="uid://c4ifgfl08wusv" path="res://Sprites/VFX/pop0.png" id="7_xhm4r"]
+[ext_resource type="Texture2D" uid="uid://dqkdm3e541k0l" path="res://Sprites/VFX/pop1.png" id="8_8w6w4"]
+[ext_resource type="Texture2D" uid="uid://dy46fn32bkjfd" path="res://Sprites/VFX/pop2.png" id="9_yvj50"]
+[ext_resource type="Texture2D" uid="uid://bklw2udglahw1" path="res://Sprites/VFX/pop3.png" id="10_5x5t3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbshb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1qmh0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r4s3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4nles")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j6l1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4nles")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r4s3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4nles")
+}],
+"loop": true,
+"name": &"chill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_xhm4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8w6w4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yvj50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5x5t3")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j6l1d")
+}, {
+"duration": 4.0,
+"texture": ExtResource("5_h8qak")
+}],
+"loop": false,
+"name": &"getAngry",
+"speed": 5.0
+}]
+
+[node name="Muncher" type="Area2D" groups=["Enemy"]]
+script = ExtResource("1_17kl8")
+metadata/_edit_group_ = true
+
+[node name="KillingArea" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1)
+shape = SubResource("CircleShape2D_bbshb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_1qmh0")
+animation = &"dead"
+autoplay = "chill"
+
+[node name="Speaker" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

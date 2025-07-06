@@ -1,13 +1,34 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6cp5fen3472r"]
+[gd_scene load_steps=10 format=3 uid="uid://c6cp5fen3472r"]
 
 [ext_resource type="Script" uid="uid://bgqgaf1ppy53i" path="res://Scripts/mage.gd" id="1_b44se"]
 [ext_resource type="Texture2D" uid="uid://p1l5ehydhkka" path="res://Sprites/Enemies/mage1.png" id="2_bbshb"]
+[ext_resource type="Texture2D" uid="uid://c4ifgfl08wusv" path="res://Sprites/VFX/pop0.png" id="2_tf4tv"]
 [ext_resource type="Texture2D" uid="uid://c52nk0eretlei" path="res://Sprites/Enemies/mage2.png" id="3_h01ui"]
+[ext_resource type="Texture2D" uid="uid://dqkdm3e541k0l" path="res://Sprites/VFX/pop1.png" id="3_jtp6b"]
+[ext_resource type="Texture2D" uid="uid://dy46fn32bkjfd" path="res://Sprites/VFX/pop2.png" id="4_7elky"]
+[ext_resource type="Texture2D" uid="uid://bklw2udglahw1" path="res://Sprites/VFX/pop3.png" id="5_ag7jq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bbshb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1qmh0"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tf4tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jtp6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7elky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ag7jq")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_bbshb")
@@ -32,7 +53,8 @@ shape = SubResource("CircleShape2D_bbshb")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_1qmh0")
-animation = &"move"
-frame_progress = 0.927976
+animation = &"dead"
 
 [node name="Speaker" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]

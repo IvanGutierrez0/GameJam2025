@@ -22,7 +22,7 @@ func _ready():
 
 
 func _on_jugar_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Level1.tscn")
+	get_tree().change_scene_to_file("res://Scenes/level1.tscn")
 
 func _on_salir_pressed():
 	get_tree().quit()
