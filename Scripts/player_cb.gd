@@ -22,6 +22,7 @@ func _start() -> void:
 
 func _ready():
 	main = get_node("../")
+	$DynamicLight.energy = lightEnergy
 	$AnimatedSprite2D.flip_h = true
 	$Flash.hide()
 

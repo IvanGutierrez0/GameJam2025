@@ -36,6 +36,7 @@ script = ExtResource("1_kry3j")
 
 [node name="Player" parent="." instance=ExtResource("3_jjvhh")]
 position = Vector2(445, 234)
+lightEnergy = 1.0
 
 [node name="HUD" parent="Player" instance=ExtResource("3_kry3j")]
 scale = Vector2(1.5, 1.5)
