@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://qd85xgd5g6kw"]
+[gd_scene load_steps=14 format=4 uid="uid://qd85xgd5g6kw"]
 
 [ext_resource type="Script" uid="uid://cvwate1nwsar8" path="res://Scripts/main.gd" id="1_kry3j"]
 [ext_resource type="PackedScene" uid="uid://c6cp5fen3472r" path="res://Scenes/mage.tscn" id="2_8gbba"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://5xae681r6vjf" path="res://Scenes/playerCB.tscn" id="3_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://w1eqyqepoxjm" path="res://Scenes/hud.tscn" id="3_kry3j"]
 [ext_resource type="PackedScene" uid="uid://p7arpqugd27f" path="res://Scenes/heartItem.tscn" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://dmn42v6h7uecx" path="res://Scenes/bat.tscn" id="6_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://b7sn4h4dti8y5" path="res://Scenes/blue_coin.tscn" id="7_hptm8"]
 [ext_resource type="PackedScene" uid="uid://civfdlhs0easy" path="res://Scenes/red_coin.tscn" id="8_6iyac"]
 [ext_resource type="PackedScene" uid="uid://r5ggehhdur5o" path="res://Scenes/green_coin.tscn" id="9_fdnlq"]
@@ -50,6 +51,10 @@ tile_set = SubResource("TileSet_kry3j")
 
 [node name="Mage" parent="Enemies" instance=ExtResource("2_8gbba")]
 position = Vector2(536, 215)
+
+[node name="Bat" parent="Enemies" instance=ExtResource("6_d1ilt")]
+position = Vector2(-92, 195)
+path = [Vector2(100, 0), Vector2(-100, 0)]
 
 [node name="Items" type="Node2D" parent="."]
 
