@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://w1eqyqepoxjm"]
+[gd_scene load_steps=6 format=3 uid="uid://w1eqyqepoxjm"]
 
 [ext_resource type="Script" uid="uid://bde618nfxlvfi" path="res://Scripts/hud.gd" id="1_fccik"]
 [ext_resource type="Texture2D" uid="uid://bt14vcxyhy1fy" path="res://Sprites/Items/Coins/Heart0.png" id="2_fccik"]
 [ext_resource type="Texture2D" uid="uid://cd7nv5vudtqyv" path="res://Sprites/Items/Coins/Heart1.png" id="3_bjfho"]
+[ext_resource type="Texture2D" uid="uid://bmt6574mb6ght" path="res://Sprites/UI/Intitulado_33.png" id="4_6fbih"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6fbih"]
 animations = [{
@@ -26,19 +27,13 @@ animations = [{
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_fccik")
 
-[node name="Scoretext" type="Label" parent="."]
-offset_left = 1016.0
-offset_top = 3.0
-offset_right = 1095.0
-offset_bottom = 43.0
-theme_override_font_sizes/font_size = 25
-text = "Score:"
-
 [node name="ScorePoints" type="Label" parent="."]
-offset_left = 1092.0
-offset_top = 4.0
-offset_right = 1304.0
-offset_bottom = 39.0
+modulate = Color(0.921828, 0.748898, 0.364431, 1)
+texture_filter = 1
+offset_left = 1083.0
+offset_right = 1295.0
+offset_bottom = 35.0
+scale = Vector2(1.5, 1.5)
 theme_override_font_sizes/font_size = 25
 text = "0"
 
@@ -62,3 +57,9 @@ position = Vector2(140, 30)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_6fbih")
 animation = &"Alive"
+
+[node name="Intitulado33" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1030, 24)
+scale = Vector2(3, 3)
+texture = ExtResource("4_6fbih")

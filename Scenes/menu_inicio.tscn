@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dcope63frcsnc"]
+[gd_scene load_steps=12 format=3 uid="uid://dcope63frcsnc"]
 
 [ext_resource type="Script" uid="uid://cc82jfird44k8" path="res://Scripts/menu_inicio.gd" id="1_7enhu"]
 [ext_resource type="Texture2D" uid="uid://bplqkdxgwjfk1" path="res://Sprites/Background/fondoju.png" id="2_tb8tw"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://c0vmvc32omab8" path="res://Audio/Music/musicamenu.mp3" id="6_r1ml1"]
 [ext_resource type="Texture2D" uid="uid://cspif7u4hxq0d" path="res://Sprites/UI/jugar.png" id="8_a4grk"]
 [ext_resource type="Script" uid="uid://l3f0kawsddip" path="res://Scripts/PlayerMenu.gd" id="8_f0uj6"]
+[ext_resource type="Texture2D" uid="uid://dw06lx873kdk5" path="res://Sprites/UI/Title.png" id="9_hqhtn"]
 [ext_resource type="Texture2D" uid="uid://dau77kpplpkhp" path="res://Sprites/UI/salir.png" id="9_tq17b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vjw3m"]
@@ -95,3 +96,9 @@ stretch_mode = 0
 stream = ExtResource("6_r1ml1")
 volume_db = -24.0
 autoplay = true
+
+[node name="Title" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(250, 200)
+scale = Vector2(7, 7)
+texture = ExtResource("9_hqhtn")
