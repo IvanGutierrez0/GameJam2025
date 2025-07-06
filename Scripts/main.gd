@@ -15,12 +15,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func playerLosesLife() -> void:
-	health -= 1
-	hud.updateLife(health)
-
-func playerGainsLife() -> void:
-	health += 1
+func setPlayerLifes(lifes : int) -> void:
+	health = lifes
 	hud.updateLife(health)
 
 func pickedCoin(tipo: int) -> void:

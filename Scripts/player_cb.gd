@@ -82,17 +82,24 @@ func _on_power_timer_timeout() -> void:
 func _on_damage_area_area_entered(area: Area2D) -> void:
 	if $Timers/InmunityTimer.is_stopped() and area.is_in_group("Enemy"):
 		health -= 1
-		main.playerLosesLife()
-		
-		if health <= 0: 
-			hide()
-		
 		$Timers/InmunityTimer.start()
+		
 	elif area.is_in_group("Item"):
 		if area.name == "HeartItem":
 			if health < 3:
 				health += 1
-				main.playerGainsLife()
+				
+	elif area.is_in_group("Traps") and $Timers/InmunityTimer.is_stopped():
+		$Timers/InmunityTimer.start()	
+		if area.is_in_group("Acid"):
+			health = 0
+		elif area.is_in_group("Spikes"):
+			health -= 1
+	
+	main.setPlayerLifes(health)
+	
+	if health <= 0: 
+		hide()
 
 func blind() -> void:
 	transparency = 1

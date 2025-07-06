@@ -30,6 +30,10 @@ Player=""
 Enemy=""
 Item=""
 Weapon=""
+Spikes=""
+Traps=""
+Acid=""
+HeartItem=""
 
 [input]
 

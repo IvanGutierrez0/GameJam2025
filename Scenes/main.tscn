@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://qd85xgd5g6kw"]
+[gd_scene load_steps=18 format=4 uid="uid://qd85xgd5g6kw"]
 
 [ext_resource type="Script" uid="uid://cvwate1nwsar8" path="res://Scripts/main.gd" id="1_kry3j"]
 [ext_resource type="PackedScene" uid="uid://c6cp5fen3472r" path="res://Scenes/mage.tscn" id="2_8gbba"]
@@ -11,7 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://civfdlhs0easy" path="res://Scenes/red_coin.tscn" id="8_6iyac"]
 [ext_resource type="PackedScene" uid="uid://r5ggehhdur5o" path="res://Scenes/green_coin.tscn" id="9_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://dhtjl5yg3lxi2" path="res://Scenes/parallax_background.tscn" id="10_hptm8"]
+[ext_resource type="PackedScene" uid="uid://cx3lhb4vs5ie5" path="res://Scenes/acid_left.tscn" id="11_fdnlq"]
 [ext_resource type="PackedScene" uid="uid://b6oy02bxx5wms" path="res://Scenes/sun.tscn" id="12_6iyac"]
+[ext_resource type="PackedScene" uid="uid://c8p81g0hcfpqo" path="res://Scenes/spikes.tscn" id="12_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://bx3dpsy1yum4e" path="res://Scenes/acid_right.tscn" id="13_wsu2k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jjvhh"]
 texture = ExtResource("3_8gbba")
@@ -33,6 +36,8 @@ sources/0 = SubResource("TileSetAtlasSource_jjvhh")
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_kry3j")
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("10_hptm8")]
 
 [node name="Player" parent="." instance=ExtResource("3_jjvhh")]
 position = Vector2(445, 234)
@@ -72,6 +77,15 @@ position = Vector2(768, 165)
 [node name="GreenCoin" parent="Items" instance=ExtResource("9_fdnlq")]
 position = Vector2(818, 165)
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("10_hptm8")]
+[node name="Traps" type="Node2D" parent="."]
+
+[node name="AcidLeft" parent="Traps" instance=ExtResource("11_fdnlq")]
+position = Vector2(24, 208)
+
+[node name="Spikes" parent="Traps" instance=ExtResource("12_jkdf5")]
+position = Vector2(-26, 208)
+
+[node name="AcidRight" parent="Traps" instance=ExtResource("13_wsu2k")]
+position = Vector2(56, 208)
 
 [node name="Sun" parent="." instance=ExtResource("12_6iyac")]

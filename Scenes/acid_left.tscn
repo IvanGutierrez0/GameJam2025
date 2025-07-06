@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://cx3lhb4vs5ie5"]
+
+[ext_resource type="Texture2D" uid="uid://bmigx64jt5awh" path="res://Sprites/Tiles/Acido/Acido02.png" id="1_5t2hl"]
+[ext_resource type="Texture2D" uid="uid://70itgssenvq1" path="res://Sprites/Tiles/Acido/Acido04.png" id="3_kbpc6"]
+[ext_resource type="Texture2D" uid="uid://cljtpxrll7cwe" path="res://Sprites/Tiles/Acido/Acido05.png" id="4_qx1fr"]
+[ext_resource type="Texture2D" uid="uid://eiu7v78iyvff" path="res://Sprites/Tiles/Acido/Acido06.png" id="5_bekpl"]
+[ext_resource type="Texture2D" uid="uid://dhjo476alo61r" path="res://Sprites/Tiles/Acido/Acido03.png" id="9_wu7ty"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_521gw"]
+size = Vector2(32, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2t50a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_wu7ty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kbpc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qx1fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bekpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_5t2hl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="AcidLeft" type="Area2D" groups=["Acid", "Traps"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_521gw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_2t50a")
+autoplay = "default"
+frame_progress = 0.119201

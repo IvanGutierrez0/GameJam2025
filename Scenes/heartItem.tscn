@@ -34,7 +34,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="HeartItem" type="Area2D" groups=["Item"]]
+[node name="HeartItem" type="Area2D" groups=["HeartItem", "Item"]]
 script = ExtResource("1_ysqfy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

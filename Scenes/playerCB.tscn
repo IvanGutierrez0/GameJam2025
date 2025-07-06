@@ -76,7 +76,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 top_level = true
 script = ExtResource("1_2bwjg")
 metadata/_edit_group_ = true

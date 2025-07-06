@@ -25,6 +25,8 @@ func updateLife(health: int) -> void:
 		$Heart2.animation = "Dead"
 	elif health == 0:
 		$Heart0.animation = "Dead"
+		$Heart1.animation = "Dead"
+		$Heart2.animation = "Dead"
 
 func pickedCoin(tipo: int) -> void:
 	var currentScore = int($ScorePoints.text)
