@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://b2owsse2xf3yk"]
+[gd_scene load_steps=59 format=4 uid="uid://b2owsse2xf3yk"]
 
 [ext_resource type="Script" uid="uid://cvwate1nwsar8" path="res://Scripts/main.gd" id="1_4otl7"]
 [ext_resource type="Texture2D" uid="uid://btvwpxt8w5lb6" path="res://Sprites/Tiles/ground.png" id="2_p68j0"]
@@ -24,7 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://c4p5cufwadsw5" path="res://Sprites/Tiles/piedras/piedra205.png" id="22_i2jya"]
 [ext_resource type="PackedScene" uid="uid://5xae681r6vjf" path="res://Scenes/playerCB.tscn" id="23_imc8n"]
 [ext_resource type="PackedScene" uid="uid://w1eqyqepoxjm" path="res://Scenes/hud.tscn" id="24_6e0xa"]
-[ext_resource type="PackedScene" uid="uid://dhtjl5yg3lxi2" path="res://Scenes/parallax_background.tscn" id="25_n1l2m"]
 [ext_resource type="PackedScene" uid="uid://c6cp5fen3472r" path="res://Scenes/mage.tscn" id="26_j77vw"]
 [ext_resource type="PackedScene" uid="uid://dmn42v6h7uecx" path="res://Scenes/bat.tscn" id="27_yc6fi"]
 [ext_resource type="PackedScene" uid="uid://c8p81g0hcfpqo" path="res://Scenes/spikes.tscn" id="28_qwb7q"]
@@ -32,7 +31,10 @@
 [ext_resource type="PackedScene" uid="uid://p7arpqugd27f" path="res://Scenes/heartItem.tscn" id="30_43uat"]
 [ext_resource type="PackedScene" uid="uid://civfdlhs0easy" path="res://Scenes/red_coin.tscn" id="31_bi2ux"]
 [ext_resource type="PackedScene" uid="uid://b6oy02bxx5wms" path="res://Scenes/sun.tscn" id="32_eadek"]
+[ext_resource type="Texture2D" uid="uid://bt0q355rxpfka" path="res://Sprites/Background/bg0.png" id="33_daeh6"]
 [ext_resource type="PackedScene" uid="uid://dg2v3k3rj38ak" path="res://Scenes/goal.tscn" id="33_p68j0"]
+[ext_resource type="Texture2D" uid="uid://cmnjp7hoej8to" path="res://Sprites/Background/bg1.png" id="34_dr50b"]
+[ext_resource type="Texture2D" uid="uid://b3ul1mayoiavb" path="res://Sprites/Background/bg2.png" id="35_nstho"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bk0ny"]
 texture = ExtResource("2_p68j0")
@@ -455,7 +457,32 @@ position = Vector2(3022, 193)
 
 [node name="Sun" parent="." instance=ExtResource("32_eadek")]
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("25_n1l2m")]
-
 [node name="Goal" parent="." instance=ExtResource("33_p68j0")]
 position = Vector2(3146, 532)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer0" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(0, -60)
+motion_scale = Vector2(0.05, 0.05)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer0"]
+texture = ExtResource("33_daeh6")
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.75, 0.75, 0.75, 1)
+position = Vector2(0, -60)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1"]
+texture = ExtResource("34_dr50b")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.25, 0.25)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("35_nstho")
